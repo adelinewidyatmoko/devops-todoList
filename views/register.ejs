@@ -1,28 +1,116 @@
 <html>
-    <head>
-        <title></title>
-    </head>
-    <body>
-        <h1>Register</h1>
-        <form action="/register" method="post">
-            <div>
-                <input type="text" name="name" id="name" required="required" placeholder="Name">
+
+<head>
+    <title>
+        Register | Todos
+    </title>
+
+    <link rel="stylesheet" href="/css/register.css">
+
+    <link rel="icon"
+        href="https://cdn-icons-png.flaticon.com/512/7692/7692809.png">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+
+    <div class="nav">
+
+        <div class="nav-logo-section">
+
+            <a href="/">
+                <img src="https://cdn-icons-png.flaticon.com/512/9802/9802618.png"
+                    alt=""
+                    class="nav-logo">
+            </a>
+
+            <a href="/">
+                <span class="nav-logo-name">Todos.</span>
+            </a>
+
+        </div>
+
+        <div class="login-signup-section">
+            <a href="/login" class="nav-login">
+                Login
+            </a>
+        </div>
+
+    </div>
+
+    <!-- MAIN -->
+
+    <div class="register-main-container">
+
+        <div class="register-card">
+
+            <h1 class="register-heading">
+                Create Account
+            </h1>
+
+            <p class="register-subheading">
+                Start organizing your chaotic beautiful life ✨
+            </p>
+
+            <form action="/api/register" method="post">
+
+                <div class="input-section">
+                    <input type="text"
+                        name="name"
+                        placeholder="First Name"
+                        required>
+                </div>
+
+                <div class="input-section">
+                    <input type="text"
+                        name="lastName"
+                        placeholder="Last Name"
+                        required>
+                </div>
+
+                <div class="input-section">
+                    <input type="text"
+                        name="phone"
+                        placeholder="Phone Number"
+                        required>
+                </div>
+
+                <div class="input-section">
+                    <input type="email"
+                        name="email"
+                        placeholder="Email Address"
+                        required>
+                </div>
+
+                <div class="input-section">
+                    <input type="password"
+                        name="password"
+                        placeholder="Password"
+                        required>
+                </div>
+
+                <button type="submit" class="register-button">
+                    Create Account
+                </button>
+
+            </form>
+
+            <div class="login-link-section">
+                Already have an account?
+                <a href="/login">Login</a>
             </div>
-            <div>
-                <input type="text" name="lastName" id="lastName" required="required" placeholder="lastName">
-            </div>
-            <div>
-                <input type="text" name="phone" id="phone" required="required" placeholder="Phone">
-            </div>
-            <div>
-                <input type="email" name="email" id="email" required="required" placeholder="Email">
-            </div>
-            <div>
-                <input type="password" name="password" id="password" required="required" placeholder="password">
-            </div>
-            <div>
-                <input type="submit" value="Register">
-            </div>
-        </form>
-    </body>
+
+        </div>
+
+    </div>
+
+    <!-- BACKGROUND ELEMENTS -->
+
+    <div class="element1"></div>
+    <div class="element2"></div>
+    <div class="element3"></div>
+
+</body>
+
 </html>

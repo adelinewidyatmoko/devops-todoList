@@ -1,21 +1,25 @@
 const db = require('../config/mongoose');
 const Dashboard = require('../models/dashboard');
-const User = require('../models/register');
 
 module.exports.dashboard = function(req, res){
-    const data = Dashboard.find({})
+
+    Dashboard.find({})
     .then(function(data){
-        User.findOne({email : "ankitvis609@gmail.com"})
-        .then(function(user){
+        const username = req.session && req.session.user ? req.session.user.name : "Guest";
+
         return res.render('dashboard', {
             title: "Dashboard",
-            // name: user.name,
-            dashboard: data
+            dashboard: data,
+            username: username
         });
-    })
+
     })
     .catch(function(err){
+
         console.log('Error', err);
+
         return;
+
     });
+
 }

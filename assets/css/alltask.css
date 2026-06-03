@@ -17,6 +17,25 @@ body {
 
 }
 
+/* Container for the holiday snow effect */
+/* Add to your CSS file in assets/css/ */
+/* CSS untuk Snow Canvas background */
+#snow-canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1;             /* Menaruh canvas melayang di atas background dasar */
+    pointer-events: none;   /* PENTING: Supaya tombol-tombol di bawahnya tetap bisa diklik */
+}
+
+/* Pastikan container utama aplikasi ditaruh di atas canvas */
+.nav-container, .main-container {
+    position: relative;
+    z-index: 2;             /* Z-index lebih tinggi dari canvas */
+}
+
 .nav-container {
     width: 100vw;
     height: auto;

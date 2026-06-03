@@ -1,3 +1,5 @@
+jest.mock('bcrypt');
+
 jest.mock('../models/register', () => ({
     create: jest.fn(),
     find: jest.fn(),
@@ -11,15 +13,13 @@ jest.mock('../models/dashboard', () => ({
     findByIdAndUpdate: jest.fn()
 }));
 
-jest.mock('bcrypt', () => ({
-    compare: jest.fn(),
-    hash: jest.fn()
-}));
-
 const bcrypt = require('bcrypt');
 const User = require('../models/register');
 const Dashboard = require('../models/dashboard');
 const router = require('./api');
+
+bcrypt.compare = jest.fn();
+bcrypt.hash = jest.fn();
 
 function getRouteHandler(path, method) {
     const layer = router.stack.find(function(routeLayer) {

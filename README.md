@@ -1,9 +1,9 @@
-# 📝 To-Do App — DevOps Pipeline
+# To-Do App — DevOps Pipeline
 > Week 3: Initial Prototype & Documentation
  
 ---
  
-## 📌 Project Overview
+## Project Overview
  
 This project is a To-Do List application built with **JavaScript / Node.js**, set up with a full **DevOps pipeline** using **GitHub Actions** for CI/CD and **Azure** for deployment.
  
@@ -11,7 +11,7 @@ The goal of Week 3 is to prototype the pipeline end-to-end — meaning every tim
  
 ---
  
-## 👥 Team Members & Responsibilities
+## Team Members & Responsibilities
  
 | Member | Role | Responsibility |
 |--------|------|----------------|
@@ -22,7 +22,7 @@ The goal of Week 3 is to prototype the pipeline end-to-end — meaning every tim
  
 ---
  
-## 🛠️ Tech Stack
+## Tech Stack
  
 | Tool | Purpose |
 |------|---------|
@@ -34,7 +34,7 @@ The goal of Week 3 is to prototype the pipeline end-to-end — meaning every tim
  
 ---
  
-## 📁 Project Structure
+## Project Structure
  
 ```
 todo-app/
@@ -51,7 +51,7 @@ todo-app/
  
 ---
  
-## ⚙️ How to Run Locally
+## How to Run Locally
  
 ### Prerequisites
 Make sure you have these installed on your machine:
@@ -91,7 +91,7 @@ Tests: 3 passed, 3 total
  
 ---
  
-## 🔄 CI/CD Pipeline (GitHub Actions)
+## CI/CD Pipeline (GitHub Actions)
  
 Every time code is pushed to the `main` branch, the pipeline runs automatically.
  
@@ -140,7 +140,7 @@ Tests are written using **Jest** and cover the 3 core functions of the To-Do app
  
 ---
  
-## 🚧 Current Status (Week 3)
+## Current Status (Week 3)
  
 - [x] GitHub repository created
 - [x] GitHub Actions workflow configured
@@ -150,7 +150,7 @@ Tests are written using **Jest** and cover the 3 core functions of the To-Do app
 - [x] Documentation written
 ---
  
-## 📄 Setup Documentation
+## Setup Documentation
  
 For a step-by-step guide on how each pipeline component was configured, see:
 - **CI Setup:** refer to `.github/workflows/ci.yml` and Member 1's notes
@@ -158,13 +158,3 @@ For a step-by-step guide on how each pipeline component was configured, see:
 - **Azure Deploy:** refer to Member 3's deployment config notes
 ---
  
-## 📬 Contact
- 
-| Member | GitHub |
-|--------|--------|
-| Member 1 | @username |
-| Member 2 | @username |
-| Member 3 | @username |
-| Member 4 | @username |
- 
-> ⚠️ Replace all placeholder values (URLs, usernames, app name) with your actual project details before submitting.

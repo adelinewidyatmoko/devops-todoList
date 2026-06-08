@@ -35,13 +35,15 @@ if (addTaskBtn) {
   });
 }
 
-closeAddTaskSection.addEventListener('click', () => {
-  addTask.style.opacity = '0';
-  addTask.style.pointerEvents = 'none';
-  navbar.style.filter = 'blur(0px)';
-  navbar.style.pointerEvents = 'all';
-  mainContainer.style.filter = 'blur(0px)';
-});
+if (closeAddTaskSection) {
+  closeAddTaskSection.addEventListener('click', () => {
+    addTask.style.opacity = '0';
+    addTask.style.pointerEvents = 'none';
+    navbar.style.filter = 'blur(0px)';
+    navbar.style.pointerEvents = 'all';
+    mainContainer.style.filter = 'blur(0px)';
+  });
+}
 
 // restricting the user from selecting a date before today
 var currentDate = new Date().toISOString().split('T')[0];
@@ -56,50 +58,56 @@ const personal = document.getElementById('personal');
 const shopping = document.getElementById('shopping');
 const others = document.getElementById('others');
 
-work.addEventListener('click', () => {
-  work.classList.add('active-category');
-  personal.classList.remove('active-category');
-  shopping.classList.remove('active-category');
-  others.classList.remove('active-category');
-});
+if (work && personal && shopping && others) {
+  work.addEventListener('click', () => {
+    work.classList.add('active-category');
+    personal.classList.remove('active-category');
+    shopping.classList.remove('active-category');
+    others.classList.remove('active-category');
+  });
 
-personal.addEventListener('click', () => {
-  personal.classList.add('active-category');
-  work.classList.remove('active-category');
-  shopping.classList.remove('active-category');
-  others.classList.remove('active-category');
-});
+  personal.addEventListener('click', () => {
+    personal.classList.add('active-category');
+    work.classList.remove('active-category');
+    shopping.classList.remove('active-category');
+    others.classList.remove('active-category');
+  });
 
-shopping.addEventListener('click', () => {
-  shopping.classList.add('active-category');
-  personal.classList.remove('active-category');
-  work.classList.remove('active-category');
-  others.classList.remove('active-category');
-});
+  shopping.addEventListener('click', () => {
+    shopping.classList.add('active-category');
+    personal.classList.remove('active-category');
+    work.classList.remove('active-category');
+    others.classList.remove('active-category');
+  });
+
+  others.addEventListener('click', () => {
+    others.classList.add('active-category');
+    personal.classList.remove('active-category');
+    shopping.classList.remove('active-category');
+    work.classList.remove('active-category');
+  });
+}
 
 const addNewTask = document.querySelector('.add-new-task');
-addNewTask.addEventListener('click', () => {
-  work.classList.remove('active-category');
-  personal.classList.remove('active-category');
-  shopping.classList.remove('active-category');
-  others.classList.remove('active-category');
-});
+if (addNewTask) {
+  addNewTask.addEventListener('click', () => {
+    work.classList.remove('active-category');
+    personal.classList.remove('active-category');
+    shopping.classList.remove('active-category');
+    others.classList.remove('active-category');
+  });
+}
 
 const categoryDivs = document.querySelectorAll('.category');
 
-categoryDivs.forEach((categoryDiv) => {
-  categoryDiv.addEventListener('click', () => {
-    const categoryValue = categoryDiv.getAttribute('data-id');
-    document.getElementById('category-choosed').value = categoryValue;
+if (categoryDivs) {
+  categoryDivs.forEach((categoryDiv) => {
+    categoryDiv.addEventListener('click', () => {
+      const categoryValue = categoryDiv.getAttribute('data-id');
+      document.getElementById('category-choosed').value = categoryValue;
+    });
   });
-});
-
-others.addEventListener('click', () => {
-  others.classList.add('active-category');
-  personal.classList.remove('active-category');
-  shopping.classList.remove('active-category');
-  work.classList.remove('active-category');
-});
+}
 
 // category section (show list)
 // const workCategory = document.getElementsByClassName('work-category');

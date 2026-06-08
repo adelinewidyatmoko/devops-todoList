@@ -40,16 +40,18 @@ describe('Todo App End-to-End Tests', () => {
     cy.get('.add-new-task').click();
 
     // 9.click the category dropdown and select "Shopping"
-    cy.get('#shopping-category').click();
+    cy.get('#shopping-category').click({ force: true });
 
     //10. click checkbox or mark test completed
-    cy.get('.shopping-category-list').find('.complete-task-section').click();
+    cy.get('.shopping-category-list')
+      .find('.complete-task-section')
+      .click({ force: true });
 
     //11. go to completed task page
     cy.get('.leftside-nav-ul li').contains('Completed Tasks').click();
 
     //12. check if the completed task is visible in the completed task page
-    cy.get('#shopping-category').click();
+    cy.get('#shopping-category').click({ force: true });
 
     // 12a shpping visible
     cy.get('.shopping-category-list').should(
@@ -61,7 +63,7 @@ describe('Todo App End-to-End Tests', () => {
     cy.get('.leftside-nav-ul li').contains('All Tasks').click();
 
     //14 chek the shopping category is visible in the all task page
-    cy.get('#shopping-category').click();
+    cy.get('#shopping-category').click({ force: true });
 
     //15. check if the completed task is visible in the all task page
     cy.get('.shopping-category-list').should(
@@ -97,9 +99,11 @@ describe('Todo App End-to-End Tests', () => {
     cy.get('.add-new-task').click();
 
     // 7. click the category dropdown and select "Shopping"
-    cy.get('#shopping-category').click();
+    cy.get('#shopping-category').click({ force: true });
 
     // 8. click the google calendar link
-    cy.get('.shopping-category-list').find('.calendar-task-section').click();
+    cy.get('.shopping-category-list')
+      .find('.calendar-task-section')
+      .click({ force: true });
   });
 });

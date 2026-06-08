@@ -1,1194 +1,1183 @@
 @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&family=Poppins&family=Roboto&family=Roboto+Slab&family=Sofia+Sans:ital,wght@0,100;0,200;0,400;1,300&display=swap');
 
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    min-height: 100vh;
-    color: #cfd1d0;
-    font-family: 'Poppins', sans-serif;
-    background-color: #181a1b;
-    overflow: hidden;
-    letter-spacing: 1px;
-
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100vh;
+  color: #cfd1d0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #181a1b;
+  overflow: hidden;
+  letter-spacing: 1px;
 }
 
 /* Container for the holiday snow effect */
 /* Add to your CSS file in assets/css/ */
 /* CSS untuk Snow Canvas background */
 #snow-canvas {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    z-index: 1;             /* Menaruh canvas melayang di atas background dasar */
-    pointer-events: none;   /* PENTING: Supaya tombol-tombol di bawahnya tetap bisa diklik */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1; /* Menaruh canvas melayang di atas background dasar */
+  pointer-events: none; /* PENTING: Supaya tombol-tombol di bawahnya tetap bisa diklik */
 }
 
 /* Pastikan container utama aplikasi ditaruh di atas canvas */
-.nav-container, .main-container {
-    position: relative;
-    z-index: 2;             /* Z-index lebih tinggi dari canvas */
+.nav-container,
+.main-container {
+  position: relative;
+  z-index: 2; /* Z-index lebih tinggi dari canvas */
 }
 
 .nav-container {
-    width: 100vw;
-    height: auto;
-    background-color: #1d2021;
-    display: flex;
-    justify-content: center;
-    box-shadow: 0 -10px 20px -5px black,
-        -10px 0 20px -5px black;
+  width: 100vw;
+  height: auto;
+  background-color: #1d2021;
+  display: flex;
+  justify-content: center;
+  box-shadow:
+    0 -10px 20px -5px black,
+    -10px 0 20px -5px black;
 }
 
 .nav {
-    position: sticky;
-    top: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    justify-content: space-between;
-    width: 70vw;
-    padding: 20px;
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+  width: 70vw;
+  padding: 20px;
 }
 
 .nav-logo-section {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .nav-logo {
-    width: 35px;
-    height: 35px;
+  width: 35px;
+  height: 35px;
 }
 
 .nav-logo-name {
-    margin-left: 10px;
-    font-size: 1.3rem;
-    font-weight: 600;
-    color: white;
+  margin-left: 10px;
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: white;
 }
 
 .login-signup-section a {
-    text-decoration: none;
-    color: white;
-    font-size: 0.9rem;
+  text-decoration: none;
+  color: white;
+  font-size: 0.9rem;
 }
 
 .nav-login {
-    transition: all 0.5s ease;
+  transition: all 0.5s ease;
 }
 
 .nav-login:hover {
-    color: #2396b3;
+  color: #2396b3;
 }
 
 .nav-register {
-    border: 1px solid grey;
-    border-radius: 8px;
-    padding: 5px 18px;
-    margin-left: 10px;
-    transition: all 0.5s ease;
+  border: 1px solid grey;
+  border-radius: 8px;
+  padding: 5px 18px;
+  margin-left: 10px;
+  transition: all 0.5s ease;
 }
 
 .nav-register:hover {
-    background-color: #2396b3;
-    border: 1px solid #2396b3;
+  background-color: #2396b3;
+  border: 1px solid #2396b3;
 }
-
 
 /* main container */
 
 .main-container {
-    display: grid;
-    grid-template-columns: 220px minmax(0, 1fr) 320px;
-    min-height: calc(100vh - 80px);
-    padding: 0;
-    align-items: stretch;
+  display: grid;
+  grid-template-columns: 220px minmax(0, 1fr) 320px;
+  min-height: calc(100vh - 80px);
+  padding: 0;
+  align-items: stretch;
 }
 
 /* left side navbar */
 
 .leftside-nav {
-    min-height: calc(100vh - 80px);
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
-    padding: 26px 22px;
-    background-color: #1d2021;
-    z-index: 0;
-    margin-top: 0;
-    box-shadow: 10px 0 20px -15px black;
+  min-height: calc(100vh - 80px);
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  padding: 26px 22px;
+  background-color: #1d2021;
+  z-index: 0;
+  margin-top: 0;
+  box-shadow: 10px 0 20px -15px black;
 }
 
 .leftside-nav-ul {
-    padding: 0;
-    margin: 0;
+  padding: 0;
+  margin: 0;
 }
 
 .leftside-nav-ul a {
-    text-decoration: none;
-    color: #cfd1d0;
-    font-size: 0.9rem;
-    font-weight: 600;
+  text-decoration: none;
+  color: #cfd1d0;
+  font-size: 0.9rem;
+  font-weight: 600;
 }
 
 .leftside-nav-ul li {
-    justify-content: flex-start;
-    padding: 10px 12px;
-    margin-bottom: 6px;
+  justify-content: flex-start;
+  padding: 10px 12px;
+  margin-bottom: 6px;
 }
 
 .pending-link {
-    color: red;
+  color: red;
 }
-
 
 /* main section */
 
 .main-section {
-    height: calc(100vh - 105px);
-    display: flex;
-    justify-content: flex-start;
-    align-items: stretch;
-    flex-direction: column;
-    margin-top: 0;
-    padding: 28px 48px 42px;
-    overflow: hidden;
+  height: calc(100vh - 105px);
+  display: flex;
+  justify-content: flex-start;
+  align-items: stretch;
+  flex-direction: column;
+  margin-top: 0;
+  padding: 28px 48px 42px;
+  overflow: hidden;
 }
 
 .page-info {
-    width: 100%;
-    max-width: 760px;
-    margin: 0 auto;
-    text-align: left;
+  width: 100%;
+  max-width: 760px;
+  margin: 0 auto;
+  text-align: left;
 }
 
 .page1 h5 {
-    font-size: 0.9rem;
-    font-weight: 600;
-    margin: 0px;
-    margin-bottom: 20px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin: 0px;
+  margin-bottom: 20px;
 }
 
 .task-info {
-    width: 100%;
-    max-width: 760px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 1rem;
-    margin: 20px auto;
+  width: 100%;
+  max-width: 760px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin: 20px auto;
 }
 
 .task-info h5 {
-    margin: 0;
+  margin: 0;
 }
 
 .upper-section {
-    width: 100%;
-    max-width: 760px;
-    margin: 0 auto;
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    flex-direction: column;
+  width: 100%;
+  max-width: 760px;
+  margin: 0 auto;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
 }
 
 .greeting-user-section {
-    margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 .greeting-user {
-    font-size: 2rem;
-    font-weight: 600;
-    margin: 0px;
+  font-size: 2rem;
+  font-weight: 600;
+  margin: 0px;
 }
 
 .greeting-user-section div {
-    margin: 0px;
-    font-size: 2rem;
-    font-weight: 600;
+  margin: 0px;
+  font-size: 2rem;
+  font-weight: 600;
 }
 
 .add-task-button-section {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .add-task-button {
-    min-width: 150px;
-    border: none;
-    border-radius: 10px;
-    background-color: #ff4155;
-    color: white;
-    font-size: 0.8rem;
-    letter-spacing: 2px;
-    padding: 10px 20px;
-    transition: all 0.5s ease-in-out;
-    text-transform: uppercase;
-    cursor: pointer;
+  min-width: 150px;
+  border: none;
+  border-radius: 10px;
+  background-color: #ff4155;
+  color: white;
+  font-size: 0.8rem;
+  letter-spacing: 2px;
+  padding: 10px 20px;
+  transition: all 0.5s ease-in-out;
+  text-transform: uppercase;
+  cursor: pointer;
 }
 
 .add-task-button:hover {
-    transform: scale(1.1);
-    background-color: #ff4155;
+  transform: scale(1.1);
+  background-color: #ff4155;
 }
-
 
 /* category list section */
 
 .category-section {
-    width: 100%;
-    min-height: 64px;
-    padding: 0 28px;
-    background-color: #1d2021;
-    border-radius: 12px;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 10px;
-    box-shadow: 5px 5px 10px rgb(15, 15, 15);
-    cursor: pointer;
+  width: 100%;
+  min-height: 64px;
+  padding: 0 28px;
+  background-color: #1d2021;
+  border-radius: 12px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  box-shadow: 5px 5px 10px rgb(15, 15, 15);
+  cursor: pointer;
 }
 
 .category-section img {
-    width: 30px;
-    height: 30px;
-    margin-right: 10px;
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
 }
 
 .category-section h5 {
-    font-size: 1rem;
+  font-size: 1rem;
 }
 
 .category-ul {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    width: 100%;
-    max-width: 760px;
-    padding: 0;
-    margin: 0 auto 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  max-width: 760px;
+  padding: 0;
+  margin: 0 auto 12px;
 }
 
 .category-section-left {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .category-section-right {
-    font-size: 0.7rem;
-    font-weight: 600;
-    letter-spacing: 2px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 2px;
 }
 
 .work-category-list {
-    width: 0;
-    height: 0;
-    margin: 10px;
-    border-radius: 20px;
-    background-color: #1d2021;
-    box-shadow: 5px 5px 10px rgb(15, 15, 15);
-    overflow: hidden;
-    transition: all 0.8s ease-in-out;
-    display: none;
+  margin: 10px;
+  border-radius: 20px;
+  background-color: #1d2021;
+  box-shadow: 5px 5px 10px rgb(15, 15, 15);
+  overflow: hidden;
+  display: none;
 }
 
 li {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 10px;
-    transition: all 0.5s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  transition: all 0.5s ease-in-out;
 }
 
 li:hover {
-    background-color: #111213;
+  background-color: #111213;
 }
 
 #work-category {
-    transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 
 #personal-category {
-    transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 
 #shopping-category {
-    transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 
 #other-category {
-    transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 
 #work-category:hover {
-    background-color: #111213
+  background-color: #111213;
 }
 
 #personal-category:hover {
-    background-color: #111213
+  background-color: #111213;
 }
 
 #shopping-category:hover {
-    background-color: #111213
+  background-color: #111213;
 }
 
 #other-category:hover {
-    background-color: #111213
+  background-color: #111213;
 }
 
 .personal-category-list {
-    margin: 10px;
-    border-radius: 20px;
-    background-color: #1d2021;
-    box-shadow: 5px 5px 10px rgb(15, 15, 15);
-    overflow: hidden;
-    display: none;
+  margin: 10px;
+  border-radius: 20px;
+  background-color: #1d2021;
+  box-shadow: 5px 5px 10px rgb(15, 15, 15);
+  overflow: hidden;
+  display: none;
 }
 
 .shopping-category-list {
-    margin: 10px;
-    border-radius: 20px;
-    background-color: #1d2021;
-    box-shadow: 5px 5px 10px rgb(15, 15, 15);
-    overflow: hidden;
-    display: none;
+  margin: 10px;
+  border-radius: 20px;
+  background-color: #1d2021;
+  box-shadow: 5px 5px 10px rgb(15, 15, 15);
+  overflow: hidden;
+  display: none;
 }
 
 .others-category-list {
-    margin: 10px;
-    border-radius: 20px;
-    background-color: #1d2021;
-    box-shadow: 5px 5px 10px rgb(15, 15, 15);
-    overflow: hidden;
-    display: none;
+  margin: 10px;
+  border-radius: 20px;
+  background-color: #1d2021;
+  box-shadow: 5px 5px 10px rgb(15, 15, 15);
+  overflow: hidden;
+  display: none;
 }
 
 .work-category-list.show-work-category-list {
-    width: 100%;
-    height: auto;
-    display: block;
+  display: block;
 }
 
 .personal-category-list.show-personal-category-list {
-    display: block;
+  display: block;
 }
 
 .shopping-category-list.show-shopping-category-list {
-    display: block;
+  display: block;
 }
 
 .others-category-list.show-others-category-list {
-    display: block;
+  display: block;
 }
-
 
 /* innner task list */
 
 .list-main-section {
-    width: 100%;
-    height: auto;
-    display: flex;
-    justify-content: space-between;
-    cursor: pointer;
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
 }
 
 .list-buttom-section {
-    width: 100%;
-    height: 0vh;
-    display: flex;
-    justify-content: space-between;
-    transition: all 0.3s ease-in-out;
-    overflow: hidden;
+  width: 100%;
+  height: 0vh;
+  display: flex;
+  justify-content: space-between;
+  transition: all 0.3s ease-in-out;
+  overflow: hidden;
 }
 
 .left-side-section.show-left-side-section.complete-task-section {
-    border-radius: 0px 20px 0px 0px;
+  border-radius: 0px 20px 0px 0px;
 }
 
 .list-buttom-section.show-list-buttom-section {
-    height: 8vh;
-    display: flex;
+  height: 8vh;
+  display: flex;
 }
 
 .inner-left-side {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    flex-direction: column;
-    justify-content: space-between;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .left-side-section {
-    width: inherit;
-    flex: 1;
-    min-width: 0;
-    display: flex;
-    justify-content: space-between;
-    padding: 13px 30px;
-    transition: all 0.5s ease-in-out;
+  width: inherit;
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  justify-content: space-between;
+  padding: 13px 30px;
+  transition: all 0.5s ease-in-out;
 }
 
 .left-buttom-side-section {
-    width: inherit;
-    display: flex;
-    justify-content: space-between;
-    padding: 15px 30px;
+  width: inherit;
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 30px;
 }
 
 .complete-task-section {
-    width: 56px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #0aa06f;
+  width: 56px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #0aa06f;
 }
 
 .complete-task-section img {
-    width: 30px;
-    height: 30px;
+  width: 30px;
+  height: 30px;
 }
 
 .bottom-section {
-    width: 100%;
-    max-width: 760px;
-    margin: 0 auto;
-    padding: 8px 6px 24px;
-    flex: 1;
-    overflow-y: auto;
+  width: 100%;
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 8px 6px 24px;
+  flex: 1;
+  overflow-y: auto;
 }
 
 .delete-task-section {
-    width: 56px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #EB5927;
-    border-radius: 0px 0px 20px 0px;
+  width: 56px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #eb5927;
+  border-radius: 0px 0px 20px 0px;
 }
 
 .delete-task-section img {
-    width: 30px;
-    height: 30px;
+  width: 30px;
+  height: 30px;
 }
 
 .calendar-task-section {
-    width: 56px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #1d7b92;
-    border-radius: 0px 0px 20px 0px;
+  width: 56px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #1d7b92;
+  border-radius: 0px 0px 20px 0px;
 }
 
 .calendar-task-section a {
-    color: white;
-    font-size: 1.4rem;
-    text-decoration: none;
+  color: white;
+  font-size: 1.4rem;
+  text-decoration: none;
 }
 
 .bottom-section::-webkit-scrollbar {
-    display: none;
+  display: none;
 }
 
 .category-section h5 {
-    margin: 0;
+  margin: 0;
 }
 
 .display-task {
-    font-size: 1.3rem;
-    font-weight: 600;
+  font-size: 1.3rem;
+  font-weight: 600;
 }
 
 .display-des {
-    font-size: 0.9rem;
-    font-weight: 400;
-    margin: 5px 0px;
+  font-size: 0.9rem;
+  font-weight: 400;
+  margin: 5px 0px;
 }
 
 .right-side div {
-    font-size: 1rem;
+  font-size: 1rem;
 }
 
 .display-currentdate {
-    font-size: 0.8rem;
+  font-size: 0.8rem;
 }
-
 
 /* form */
 
 .close-add-task-section {
-    position: absolute;
-    top: 2.1%;
-    right: 2.9%;
-    cursor: pointer;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  cursor: pointer;
+  z-index: 10;
 }
 
 .close-add-task-section img {
-    width: 15px;
-    height: 15px;
-    filter: brightness(0) invert(1);
+  width: 15px;
+  height: 15px;
+  filter: brightness(0) invert(1);
 }
 
 #add-task-form {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    flex-direction: column;
+  display: flex;
+  justify-content: flex-start;
+  align-items: stretch;
+  flex-direction: column;
+  width: 100%;
 }
 
 .input-field {
-    display: flex;
-    justify-content: flex-start;
-    flex-direction: column;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  width: 100%;
 }
 
 #add-task-section {
-    position: absolute;
-    top: 20%;
-    left: 35%;
-    width: 18.8vw;
-    height: auto;
-    padding: 30px;
-    background-color: #1d2021;
-    border-radius: 20px;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    opacity: 0;
-    pointer-events: none;
-    transition: all 0.5s ease-in-out;
-    box-shadow: 5px 5px 10px black;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  /* ADD THESE TWO LINES TO FIX THE CUT-OFF: */
+  max-height: 90vh; /* Prevents modal from being taller than the screen */
+  overflow-y: auto; /* Adds a scrollbar inside the modal if it gets too tall */
+
+  width: 90%;
+  max-width: 480px;
+  padding: 30px 40px;
+  background-color: #1d2021;
+  border-radius: 20px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.5s ease-in-out;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.8);
+  z-index: 1000;
+}
+
+/* Optional custom scrollbar if the modal needs to scroll on extremely small screens */
+#add-task-section::-webkit-scrollbar {
+  width: 5px;
+}
+#add-task-section::-webkit-scrollbar-thumb {
+  background: #555;
+  border-radius: 10px;
 }
 
 .input-task {
-    width: 19vw;
-    height: 5vh;
-    border: none;
-    border-radius: 10px;
-    padding: 0px 20px;
-    font-size: 1rem;
-    font-family: 'Poppins', sans-serif;
-    color: white;
-    background-color: #181a1b;
-    margin-top: 20px;
-    box-shadow: 5px 5px 10px rgb(14, 13, 13);
+  width: 100%;
+  height: 40px; /* Reduced height */
+  border: none;
+  border-radius: 8px;
+  padding: 0px 15px;
+  font-size: 0.9rem;
+  font-family: 'Poppins', sans-serif;
+  color: white;
+  background-color: #181a1b;
+  margin-top: 15px;
+  box-shadow: 2px 2px 5px rgb(14, 13, 13);
 }
 
 .input-task:focus {
-    outline: none;
+  outline: none;
 }
 
 #description {
-    width: 16vw;
-    height: 10vh;
-    border: none;
-    border-radius: 10px;
-    padding: 10px 20px;
-    font-size: 0.9rem;
-    font-family: 'Poppins', sans-serif;
-    color: white;
-    background-color: #181a1b;
-    margin-top: 20px;
-    resize: none;
-    box-shadow: 5px 5px 10px rgb(14, 13, 13);
+  width: 100%;
+  height: 80px; /* Reduced height */
+  border: none;
+  border-radius: 8px;
+  padding: 10px 15px;
+  font-size: 0.85rem;
+  font-family: 'Poppins', sans-serif;
+  color: white;
+  background-color: #181a1b;
+  margin-top: 15px;
+  resize: none;
+  box-shadow: 2px 2px 5px rgb(14, 13, 13);
 }
 
 #description:focus {
-    outline: none;
+  outline: none;
 }
 
 #description::-webkit-scrollbar {
-    display: none;
+  display: none;
 }
 
 .category-heading {
-    width: 19vw;
+  width: 100%;
 }
 
 .category-heading h5 {
-    margin: 20px 20px 20px 10px;
+  margin: 15px 0px 10px 5px;
+  font-size: 0.85rem;
 }
 
 .add-task-category-main-section {
-    width: 18vw;
+  width: 100%;
 }
 
 .add-task-category-section {
-    display: grid;
-    place-items: left;
-    grid-template-columns: 0.1fr 0.1fr;
-    grid-template-rows: 0.1fr 0.1fr;
-    margin-bottom: 20px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px; /* Tighter gap */
+  margin-bottom: 15px;
+  width: 100%;
 }
 
-#work {
-    width: 4vw;
-    height: 6vh;
-    background-color: #20212b;
-    padding: 20px;
-    margin: 10px;
-    margin-left: 0;
-    border-radius: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    justify-content: space-between;
-    box-shadow: 5px 5px 10px rgb(19, 19, 19);
-    cursor: pointer;
-    transition: all 0.3s ease-in-out;
-}
-
-#work.active-category {
-    background-color: #1d1d23;
-    transform: scale(1.1);
-}
-
-#work span {
-    font-size: 1rem;
-    font-weight: 600;
-    letter-spacing: 1px;
-}
-
-#work img {
-    width: 40px;
-    height: 40px;
-}
-
-#personal {
-    width: 4vw;
-    height: 6vh;
-    background-color: #20212b;
-    padding: 20px;
-    margin: 10px;
-    margin-left: 0;
-    border-radius: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    justify-content: space-between;
-    box-shadow: 5px 5px 10px rgb(19, 19, 19);
-    cursor: pointer;
-    transition: all 0.3s ease-in-out;
-}
-
-#personal.active-category {
-    background-color: #1d1d23;
-    transform: scale(1.1);
-}
-
-#personal span {
-    font-size: 1rem;
-    font-weight: 600;
-    letter-spacing: 1px;
-}
-
-#personal img {
-    width: 50px;
-    height: 50px;
-}
-
-#shopping {
-    width: 4vw;
-    height: 6vh;
-    background-color: #20212b;
-    padding: 20px;
-    margin: 10px;
-    margin-left: 0;
-    border-radius: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    justify-content: space-between;
-    box-shadow: 5px 5px 10px rgb(19, 19, 19);
-    cursor: pointer;
-    transition: all 0.3s ease-in-out;
-}
-
-#shopping.active-category {
-    background-color: #1d1d23;
-    transform: scale(1.1);
-}
-
-#shopping span {
-    font-size: 1rem;
-    font-weight: 600;
-    letter-spacing: 1px;
-}
-
-#shopping img {
-    width: 50px;
-    height: 50px;
-}
-
+#work,
+#personal,
+#shopping,
 #others {
-    width: 4vw;
-    height: 6vh;
-    background-color: #20212b;
-    padding: 20px;
-    margin: 10px;
-    margin-left: 0;
-    border-radius: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    justify-content: space-between;
-    box-shadow: 5px 5px 10px rgb(19, 19, 19);
-    cursor: pointer;
-    transition: all 0.3s ease-in-out;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1; /* Keep perfect squares */
+  background-color: #20212b;
+  padding: 8px;
+  margin: 0;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 2px 2px 5px rgb(19, 19, 19);
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
 }
 
+#work.active-category,
+#personal.active-category,
+#shopping.active-category,
 #others.active-category {
-    background-color: #1d1d23;
-    transform: scale(1.1);
+  background-color: #1d1d23;
+  transform: scale(1.05); /* Subtler scaling */
 }
 
+#work span,
+#personal span,
+#shopping span,
 #others span {
-    font-size: 1rem;
-    font-weight: 600;
-    letter-spacing: 1px;
+  font-size: 0.7rem; /* Smaller text */
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin-top: 5px;
+  text-align: center;
 }
 
+#work img,
+#personal img,
+#shopping img,
 #others img {
-    width: 50px;
-    height: 50px;
+  width: 24px; /* Smaller icons */
+  height: 24px;
 }
 
 .date-time {
-    width: 18vw;
-    display: flex;
-    justify-content: flex-start;
-    justify-content: space-between;
-    gap: 1rem;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 5px;
 }
 
-.input-date {
-    width: 50%;
-    height: 5vh;
-    border: none;
-    border-radius: 10px;
-    padding: 0px 20px;
-    font-size: 1rem;
-    font-family: 'Poppins', sans-serif;
-    color: white;
-    background-color: #181a1b;
-    text-transform: uppercase;
-    box-shadow: 5px 5px 10px rgb(14, 13, 13);
-}
-
-.input-date:focus {
-    outline: none;
-}
-
+.input-date,
 .input-time {
-    width: 50%;
-    height: 5vh;
-    border: none;
-    border-radius: 10px;
-    padding: 0px 20px;
-    font-size: 1rem;
-    font-family: 'Poppins', sans-serif;
-    color: white;
-    background-color: #181a1b;
-    text-transform: uppercase;
-    box-shadow: 5px 5px 10px rgb(14, 13, 13);
+  width: 100%;
+  height: 40px; /* Reduced height */
+  border: none;
+  border-radius: 8px;
+  padding: 0px 15px;
+  font-size: 0.8rem;
+  font-family: 'Poppins', sans-serif;
+  color: white;
+  background-color: #181a1b;
+  text-transform: uppercase;
+  box-shadow: 2px 2px 5px rgb(14, 13, 13);
 }
 
+.input-date:focus,
 .input-time:focus {
-    outline: none;
+  outline: none;
 }
 
 .add-new-task {
-    width: 40%;
-    border: none;
-    border-radius: 10px;
-    padding: 10px 20px;
-    font-size: 0.9rem;
-    font-family: 'Poppins', sans-serif;
-    color: white;
-    background-color: #ff4155;
-    text-transform: uppercase;
-    margin-top: 20px;
-    transition: all 0.5s ease-in-out;
-}
-
-.add-new-task:hover {
-    background-color: #181a1b;
-    border: 1px solid #ff4155;
+  width: 100%;
+  min-width: 100%; /* Forces the width */
+  height: 48px;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 20px;
+  font-size: 0.9rem;
+  font-weight: 600; /* Makes the text pop slightly more */
+  font-family: 'Poppins', sans-serif;
+  color: white;
+  background-color: #ff4155;
+  text-transform: uppercase;
+  margin-top: 30px; /* Gives nice breathing room from the date picker */
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+  box-sizing: border-box; /* Ensures padding doesn't break the 100% width */
+  align-self: stretch; /* Forces it to fill the flex column entirely */
 }
 
 /* aside section */
 
 .aside-section {
-    margin-top: 0;
-    background-color: #1d2021;
-    padding: 28px 24px;
-    box-shadow: -10px 0 20px -15px black;
-    min-height: calc(100vh - 80px);
-    box-sizing: border-box;
+  margin-top: 0;
+  background-color: #1d2021;
+  padding: 28px 24px;
+  box-shadow: -10px 0 20px -15px black;
+  min-height: calc(100vh - 80px);
+  box-sizing: border-box;
 }
 
 .profile-section {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 18px;
-    margin: 0 0 28px;
-    padding-bottom: 28px;
-    border-bottom: #181a1b 3px solid;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 18px;
+  margin: 0 0 28px;
+  padding-bottom: 28px;
+  border-bottom: #181a1b 3px solid;
 }
 
 .username-section {
-    min-width: 0;
-    font-size: 1rem;
-    font-weight: 600;
-    line-height: 1.4;
+  min-width: 0;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.4;
 }
 
 .username {
-    font-size: 1.5rem;
-    font-weight: 600;
-    color: white;
-    letter-spacing: 1px;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: white;
+  letter-spacing: 1px;
 }
 
 .userimage {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .colon {
-    margin-left: 10px;
-    font-size: 1.5rem;
-    font-weight: 600;
+  margin-left: 10px;
+  font-size: 1.5rem;
+  font-weight: 600;
 }
 
 .userimage img {
-    width: 88px;
-    height: 88px;
+  width: 88px;
+  height: 88px;
 }
 
 .profile-task-info-section {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    gap: 1rem;
-    padding: 0 0 28px;
-    /* place-items: center; */
-    justify-items: start;
-    padding-bottom: 2rem;
-    border-bottom: #181a1b 3px solid;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 1rem;
+  padding: 0 0 28px;
+  /* place-items: center; */
+  justify-items: start;
+  padding-bottom: 2rem;
+  border-bottom: #181a1b 3px solid;
 }
 
 .info-heading {
-    margin: 0;
-    font-size: 0.7rem;
-    letter-spacing: 1px;
+  margin: 0;
+  font-size: 0.7rem;
+  letter-spacing: 1px;
 }
 
 .info {
-    margin: 5px 0px;
-    font-size: 1.5rem;
+  margin: 5px 0px;
+  font-size: 1.5rem;
 }
 
 .total-task-line {
-    font-size: 1.5rem;
-    color: #1d7b92;
+  font-size: 1.5rem;
+  color: #1d7b92;
 }
 
 .completed-task-line {
-    font-size: 1.5rem;
-    color: #32ba7c;
+  font-size: 1.5rem;
+  color: #32ba7c;
 }
 
 .pending-task-line {
-    font-size: 1.5rem;
-    color: red;
+  font-size: 1.5rem;
+  color: red;
 }
 
 footer {
-    width: 100%;
-    height: 2.5vh;
-    background-color: #121314;
-    position: absolute;
-    bottom: 0;
-    z-index: 100;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  width: 100%;
+  height: 2.5vh;
+  background-color: #121314;
+  position: absolute;
+  bottom: 0;
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 footer span {
-    font-size: 0.7rem;
-    font-weight: 600;
-    color: #cfd1d0;
-    letter-spacing: 1px;
-    padding: 10px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: #cfd1d0;
+  letter-spacing: 1px;
+  padding: 10px;
 }
 
 /* responsive */
 
 @media screen and (max-width: 1500px) {
+  .main-container {
+    grid-template-columns: 190px minmax(0, 1fr) 280px;
+  }
 
-    .main-container {
-        grid-template-columns: 190px minmax(0, 1fr) 280px;
-    }
+  .leftside-nav-ul li {
+    font-size: 0.7rem;
+  }
 
-    .leftside-nav-ul li {
-        font-size: 0.7rem;
-    }
+  .greeting-user-section h2 {
+    font-size: 1rem;
+  }
 
-    .greeting-user-section h2 {
-        font-size: 1rem;
-    }
+  .greeting-user-section div {
+    font-size: 1.5rem;
+  }
 
-    .greeting-user-section div {
-        font-size: 1.5rem;
-    }
+  .add-task-button {
+    min-width: 130px;
+    font-size: 0.6rem;
+  }
 
-    .add-task-button {
-        min-width: 130px;
-        font-size: 0.6rem;
-    }
+  /* task category section */
 
+  .category-section {
+    height: 2vh;
+  }
 
-    /* task category section */
+  .category-section-left img {
+    width: 26px;
+    height: 26px;
+  }
 
-    .category-section {
-        height: 2vh;
-    }
+  .category-section-left h5 {
+    font-size: 0.8rem;
+  }
 
-    .category-section-left img {
-        width: 26px;
-        height: 26px;
-    }
+  .category-section-right {
+    font-size: 0.5rem;
+  }
 
-    .category-section-left h5 {
-        font-size: 0.8rem;
-    }
-
-    .category-section-right {
-        font-size: 0.5rem;
-    }
-
-    /* task list */
-
-    .work-category-list.show-work-category-list {
-        width: 100%;
-        height: auto;
-        display: block;
-    }
-
-    .list-main-section {
-        width: 100%;
-    }
-
-    .list-buttom-section {
-        width: 100%;
-    }
-
-    .left-side-section {
-        padding: 15px 20px;
-    }
-
-    .left-buttom-side-section {
-        padding: 15px 20px;
-    }
+  /* task list */
 
 
-    /* task inner fonts */
+  .list-main-section {
+    width: 100%;
+  }
 
-    .display-task {
-        font-size: 0.8rem;
-    }
+  .list-buttom-section {
+    width: 100%;
+  }
 
-    .display-des {
-        font-size: 0.6rem;
-    }
+  .left-side-section {
+    padding: 15px 20px;
+  }
 
-    .right-side div {
-        font-size: 0.6rem;
-    }
+  .left-buttom-side-section {
+    padding: 15px 20px;
+  }
 
-    .display-currentdate {
-        font-size: 0.5rem;
-    }
+  /* task inner fonts */
 
+  .display-task {
+    font-size: 0.8rem;
+  }
 
-    /* profile section */
+  .display-des {
+    font-size: 0.6rem;
+  }
 
-    .aside-section {
-        padding: 20px;
-    }
+  .right-side div {
+    font-size: 0.6rem;
+  }
 
-    .username-section {
-        font-size: 0.8rem;
-        font-weight: 600;
-    }
+  .display-currentdate {
+    font-size: 0.5rem;
+  }
 
-    .username {
-        font-size: 1rem;
-    }
+  /* profile section */
 
-    .userimage img {
-        width: 6rem;
-        height: 6rem;
-    }
+  .aside-section {
+    padding: 20px;
+  }
 
-    .profile-task-info-section {
-        gap: 0.5rem;
-        padding: 5px;
-    }
+  .username-section {
+    font-size: 0.8rem;
+    font-weight: 600;
+  }
 
-    .total-tasks-info-heading {}
+  .username {
+    font-size: 1rem;
+  }
 
-    .info {
-        font-size: 1.1rem;
-    }
+  .userimage img {
+    width: 6rem;
+    height: 6rem;
+  }
 
-    /* add task form */
+  .profile-task-info-section {
+    gap: 0.5rem;
+    padding: 5px;
+  }
 
-    #add-task-section {
-        top: 10%;
-    }
+  .total-tasks-info-heading {
+  }
 
-    #work img {
-        width: 30px;
-        height: 30px;
-    }
+  .info {
+    font-size: 1.1rem;
+  }
 
-    #work span {
-        font-size: 0.8rem;
-    }
+  /* add task form */
 
-    #personal img {
-        width: 30px;
-        height: 30px;
-    }
+  #add-task-section {
+    top: 10%;
+  }
 
-    #personal span {
-        font-size: 0.8rem;
-    }
+  #work img {
+    width: 30px;
+    height: 30px;
+  }
 
-    #shopping img {
-        width: 30px;
-        height: 30px;
-    }
+  #work span {
+    font-size: 0.8rem;
+  }
 
-    #shopping span {
-        font-size: 0.8rem;
-    }
+  #personal img {
+    width: 30px;
+    height: 30px;
+  }
 
-    #others img {
-        width: 30px;
-        height: 30px;
-    }
+  #personal span {
+    font-size: 0.8rem;
+  }
 
-    #others span {
-        font-size: 0.8rem;
-    }
+  #shopping img {
+    width: 30px;
+    height: 30px;
+  }
 
-    .input-date {
-        font-size: 0.7rem;
-    }
+  #shopping span {
+    font-size: 0.8rem;
+  }
 
-    .input-time {
-        font-size: 0.7rem;
-    }
+  #others img {
+    width: 30px;
+    height: 30px;
+  }
 
-    .add-new-task {
-        width: 10vw;
-        font-size: 0.6rem;
-    }
+  #others span {
+    font-size: 0.8rem;
+  }
+
+  .input-date {
+    font-size: 0.7rem;
+  }
+
+  .input-time {
+    font-size: 0.7rem;
+  }
+
+  .add-new-task {
+    width: 10vw;
+    font-size: 0.6rem;
+  }
 }
 
 @media screen and (max-width: 980px) {
-    body {
-        overflow-y: auto;
-    }
+  body {
+    overflow-y: auto;
+  }
 
-    .nav {
-        width: 100%;
-    }
+  .nav {
+    width: 100%;
+  }
 
-    .main-container {
-        grid-template-columns: 180px minmax(0, 1fr);
-    }
+  .main-container {
+    grid-template-columns: 180px minmax(0, 1fr);
+  }
 
-    .main-section {
-        height: auto;
-        min-height: calc(100vh - 80px);
-        padding: 24px;
-        overflow: visible;
-    }
+  .main-section {
+    height: auto;
+    min-height: calc(100vh - 80px);
+    padding: 24px;
+    overflow: visible;
+  }
 
-    .aside-section {
-        grid-column: 1 / -1;
-        min-height: auto;
-        padding: 22px 24px 48px;
-    }
+  .aside-section {
+    grid-column: 1 / -1;
+    min-height: auto;
+    padding: 22px 24px 48px;
+  }
 
-    .profile-section {
-        justify-content: flex-start;
-    }
+  .profile-section {
+    justify-content: flex-start;
+  }
 
-    .profile-task-info-section {
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-    }
+  .profile-task-info-section {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
 }
 
 @media screen and (max-width: 680px) {
-    .main-container {
-        grid-template-columns: 1fr;
-    }
+  .main-container {
+    grid-template-columns: 1fr;
+  }
 
-    .leftside-nav {
-        min-height: auto;
-        padding: 16px 18px;
-    }
+  .leftside-nav {
+    min-height: auto;
+    padding: 16px 18px;
+  }
 
-    .leftside-nav-ul {
-        display: flex;
-        gap: 8px;
-        overflow-x: auto;
-    }
+  .leftside-nav-ul {
+    display: flex;
+    gap: 8px;
+    overflow-x: auto;
+  }
 
-    .leftside-nav-ul li {
-        white-space: nowrap;
-        margin-bottom: 0;
-    }
+  .leftside-nav-ul li {
+    white-space: nowrap;
+    margin-bottom: 0;
+  }
 
-    .main-section {
-        padding: 20px 16px;
-    }
+  .main-section {
+    padding: 20px 16px;
+  }
 
-    .task-info {
-        align-items: flex-start;
-        flex-direction: column;
-    }
+  .task-info {
+    align-items: flex-start;
+    flex-direction: column;
+  }
 
-    .add-task-button {
-        width: 100%;
-    }
+  .add-task-button {
+    width: 100%;
+  }
 
-    .category-section {
-        padding: 0 18px;
-    }
+  .category-section {
+    padding: 0 18px;
+  }
 
-    .profile-task-info-section {
-        grid-template-columns: 1fr;
-    }
+  .profile-task-info-section {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* --- Add this at the very bottom of your CSS file --- */
+
+@media screen and (max-width: 408px), screen and (max-height: 850px) {
+  #add-task-section {
+    top: 65%; /* Pushes the form super down on smaller windows */
+    padding: 20px 25px; /* Smaller padding */
+    width: 95%;
+    max-width: 400px; /* Overall smaller modal size */
+    max-height: 90vh; /* Keep it inside the screen */
+    overflow-y: auto; /* Allows scrolling if screen is extremely tiny */
+  }
+
+  .close-add-task-section {
+    top: 15px;
+    right: 15px;
+  }
+
+  .input-task {
+    min-height: 40px; /* Smaller input */
+    font-size: 0.9rem;
+    margin-top: 15px;
+    padding: 0 15px;
+  }
+
+  #description {
+    height: 70px; /* Shorter description box */
+    margin-top: 15px;
+    padding: 10px 15px;
+    font-size: 0.8rem;
+  }
+
+  .category-heading h5 {
+    margin: 15px 0px 10px 5px; /* Tighter margins */
+    font-size: 0.9rem;
+  }
+
+  .add-task-category-section {
+    gap: 10px; /* Tighter gap between category boxes */
+    margin-bottom: 10px;
+  }
+
+  #work,
+  #personal,
+  #shopping,
+  #others {
+    padding: 8px; /* Tighter box padding */
+    border-radius: 10px;
+  }
+
+  #work img,
+  #personal img,
+  #shopping img,
+  #others img {
+    width: 24px; /* Smaller icons inside categories */
+    height: 24px;
+  }
+
+  #work span,
+  #personal span,
+  #shopping span,
+  #others span {
+    font-size: 0.65rem; /* Smaller text inside categories */
+    margin-top: 5px;
+  }
+
+  .date-time {
+    gap: 0.5rem;
+    margin-top: 5px;
+  }
+
+  .input-date,
+  .input-time {
+    height: 40px; /* Shorter date/time boxes */
+    font-size: 0.8rem;
+    padding: 0 10px;
+  }
+
+  .add-new-task {
+    height: 40px; /* Shorter submit button */
+    margin-top: 20px; /* Brought closer to the form */
+    font-size: 0.8rem;
+    padding: 5px 20px;
+  }
 }

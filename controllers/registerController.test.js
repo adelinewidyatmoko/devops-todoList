@@ -1,29 +1,29 @@
 const registerController = require('./registerController');
 
 describe('registerController', () => {
-    test('renders the register page with the title', () => {
-        const req = {};
-        const res = {
-            render: jest.fn()
-        };
+  test('renders the register page with the title', () => {
+    const req = {};
+    const res = {
+      render: jest.fn(),
+    };
 
-        registerController.register(req, res);
+    registerController.register(req, res);
 
-        expect(res.render).toHaveBeenCalledWith('register', {
-            title: 'register'
-        });
+    expect(res.render).toHaveBeenCalledWith('register', {
+      title: 'register',
     });
+  });
 
-    test('renders the login page with the title', () => {
-        const req = {};
-        const res = {
-            render: jest.fn()
-        };
+  test('renders the login page with the title', () => {
+    const req = {};
+    const res = {
+      render: jest.fn(),
+    };
 
-        registerController.login(req, res);
+    registerController.login(req, res);
 
-        expect(res.render).toHaveBeenCalledWith('login', {
-            title: 'login'
-        });
+    expect(res.render).toHaveBeenCalledWith('login', {
+      title: 'login',
     });
+  });
 });

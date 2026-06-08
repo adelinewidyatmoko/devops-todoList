@@ -16,17 +16,19 @@ app.set('views', path.join(__dirname, 'views'));
 // Middlewares
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static('assets'));
-app.use(session({
+app.use(
+  session({
     secret: process.env.SESSION_SECRET || 'todo-list-session-secret',
     resave: false,
-    saveUninitialized: false
-}));
+    saveUninitialized: false,
+  })
+);
 
 // ─── THE CLEAN ROUTE MOUNTING ───
 app.use('/', require('./routes/index1')); // Handles page views (/, /dashboard, etc.)
 app.use('/api', require('./routes/api')); // Handles data actions (/api/register, /api/addtask)
 
 app.listen(port, (err) => {
-    if (err) console.log(`Error: ${err}`);
-    console.log(`Yupp! Server is running cleanly on port ${port}`);
+  if (err) console.log(`Error: ${err}`);
+  console.log(`Yupp! Server is running cleanly on port ${port}`);
 });

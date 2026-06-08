@@ -389,7 +389,6 @@ li:hover {
 }
 
 .work-category-list.show-work-category-list {
-  
   display: block;
 }
 
@@ -956,8 +955,6 @@ footer span {
     gap: 0.5rem;
     padding: 5px;
   }
-
-
 
   .info {
     font-size: 1.1rem;

@@ -305,7 +305,6 @@ body {
   align-items: center;
 }
 
-
 .category-section-right {
   font-size: 0.7rem;
   font-weight: 600;
@@ -393,7 +392,6 @@ li:hover {
 }
 
 .work-category-list.show-work-category-list {
-
   display: block;
 }
 
@@ -918,7 +916,6 @@ footer span {
 
   /* task list */
 
-
   .list-main-section {
     width: 100%;
   }
@@ -1118,8 +1115,7 @@ footer span {
 
 /* --- Add this at the very bottom of your CSS file --- */
 
-@media screen and (max-width: 408px),
-screen and (max-height: 850px) {
+@media screen and (max-width: 408px), screen and (max-height: 850px) {
   #add-task-section {
     top: 65%;
     /* Pushes the form super down on smaller windows */

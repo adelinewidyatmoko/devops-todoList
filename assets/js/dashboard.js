@@ -25,14 +25,15 @@ const navbar = document.querySelector('.nav-container');
 const mainContainer = document.querySelector('.main-container');
 const closeAddTaskSection = document.querySelector('.close-add-task-section');
 // const body = document.getElementsByTagName('body')[0];
-
-addTaskBtn.addEventListener('click', () => {
-  addTask.style.opacity = '1';
-  addTask.style.pointerEvents = 'all';
-  navbar.style.filter = 'blur(5px)';
-  navbar.style.pointerEvents = 'none';
-  mainContainer.style.filter = 'blur(5px)';
-});
+if (addTaskBtn) {
+  addTaskBtn.addEventListener('click', () => {
+    addTask.style.opacity = '1';
+    addTask.style.pointerEvents = 'all';
+    navbar.style.filter = 'blur(5px)';
+    navbar.style.pointerEvents = 'none';
+    mainContainer.style.filter = 'blur(5px)';
+  });
+}
 
 closeAddTaskSection.addEventListener('click', () => {
   addTask.style.opacity = '0';

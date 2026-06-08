@@ -44,6 +44,8 @@ jobs:
       - name: Run Cypress E2E  tests
         uses: cypress-io/github-action@v5
         with:
+          # Tell cypress to ignore peer dependency conflicts during install
+          install-command: npm ci --legacy-peer-deps
           start: npm start
           wait-on: 'http://localhost:4000'
 

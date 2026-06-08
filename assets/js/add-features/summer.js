@@ -1,3 +1,6 @@
+/* global ACTIVE_EFFECT */
+
+// Your existing code follows below...
 window.addEventListener('DOMContentLoaded', () => {
     if (typeof ACTIVE_EFFECT === 'undefined' || ACTIVE_EFFECT !== 'summer') return;
 

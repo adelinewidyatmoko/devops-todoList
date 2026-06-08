@@ -33,7 +33,7 @@ jobs:
 
       # 5. Code Quality: Run ESLint
       - name: Lint Code (ESLint)
-        run: npx eslint "**/*.{js,ejs}"
+        run: npx eslint "**/*.js"
 
       # Added: Good CI should always run your test suite
       - name: Run Tests

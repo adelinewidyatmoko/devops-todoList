@@ -5,14 +5,16 @@ const hour = date.getHours();
 // greeting user
 const greetingUser = document.querySelector('.greeting-user');
 
-if (hour >= 4 && hour < 12 && ampm === 'am') {
-  greetingUser.innerHTML = 'Good Morning ,';
-} else if (hour >= 12 && hour <= 17 && ampm === 'pm') {
-  greetingUser.innerHTML = 'Good Afternoon ,';
-} else if (hour >= 0 && hour <= 11 && ampm === 'am') {
-  greetingUser.innerHTML = 'Good Night Take A Rest or';
-} else {
-  greetingUser.textContent = 'Good Evening ,';
+if (greetingUser) {
+  if (hour >= 4 && hour < 12 && ampm === 'am') {
+    greetingUser.innerHTML = 'Good Morning ,';
+  } else if (hour >= 12 && hour <= 17 && ampm === 'pm') {
+    greetingUser.innerHTML = 'Good Afternoon ,';
+  } else if (hour >= 0 && hour <= 11 && ampm === 'am') {
+    greetingUser.innerHTML = 'Good Night Take A Rest or';
+  } else {
+    greetingUser.textContent = 'Good Evening ,';
+  }
 }
 
 // add task section

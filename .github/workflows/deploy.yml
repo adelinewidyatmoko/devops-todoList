@@ -43,6 +43,8 @@ jobs:
       # e2e test
       - name: Run Cypress E2E  tests
         uses: cypress-io/github-action@v5
+        env:
+          MONGODB_URL: ${{ secrets.MONGODB_URL }}
         with:
           # Tell cypress to ignore peer dependency conflicts during install
           install-command: npm ci --legacy-peer-deps

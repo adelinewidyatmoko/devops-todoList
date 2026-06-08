@@ -25,7 +25,7 @@ jobs:
           cache-dependency-path: package-lock.json
 
       - name: Install dependencies
-        run: npm ci
+        run: npm ci --legacy-peer-deps
 
        # 4. Code Quality: Check formatting with Prettier
       - name: Check Formatting (Prettier)

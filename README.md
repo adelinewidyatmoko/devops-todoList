@@ -165,12 +165,29 @@ Tests are written using **Jest** and cover the 3 core functions of the To-Do app
 
 ---
 
-## Setup Documentation
+CI to CD
+# 1. Pindah ke branch cd_role
+git checkout cd_role
 
-For a step-by-step guide on how each pipeline component was configured, see:
+# 2. Ambil update terbaru dari server (termasuk ci_role temenmu)
+git fetch origin
 
-- **CI Setup:** refer to `.github/workflows/ci.yml` and Member 1's notes
-- **Tests:** refer to `tests/todo.test.js` and Member 2's notes
-- **Azure Deploy:** refer to Member 3's deployment config notes
+# 3. Merge isi ci_role ke cd_role kamu
+git merge origin/ci_role
 
----
+Staging Deployment
+# Push ke github (ini akan manggil auto-deploy staging)
+git push origin cd_role
+
+Production Deployment
+# 1. Pindah ke branch main
+git checkout main
+
+# 2. Ambil update terbaru dari server
+git fetch origin
+
+# 3. Merge isi cd_role ke main
+git merge origin/cd_role
+
+# 4. Push ke github (ini akan manggil auto-deploy production)
+git push origin main

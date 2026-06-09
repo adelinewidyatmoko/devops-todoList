@@ -1,0 +1,114 @@
+name: CI/CD - Unified Pipeline
+
+on:
+  push:
+    branches: [ci_role, cd_role, main]
+  pull_request:
+    branches: [ci_role, cd_role, main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  # ────────────────────────────────────────────────────────────────────────────
+  # STAGE 1: CI (Quality Checks & Testing)
+  # ────────────────────────────────────────────────────────────────────────────
+  ci-quality:
+    name: Code Quality (Lint & Format)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+      - name: Install dependencies
+        run: npm ci --legacy-peer-deps
+      - name: Check Formatting
+        run: npm run format:check
+      - name: Lint Code
+        run: npm run lint
+
+  ci-tests:
+    name: Automated Tests (Jest & Cypress)
+    needs: ci-quality
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+      - name: Install dependencies
+        run: npm ci --legacy-peer-deps
+
+      - name: Run Unit Tests (Jest)
+        run: npm test
+        env:
+          MONGODB_URL: ${{ secrets.MONGODB_URL }}
+          SESSION_SECRET: ${{ secrets.SESSION_SECRET }}
+
+      - name: Run E2E Tests (Cypress)
+        uses: cypress-io/github-action@v5
+        with:
+          start: npm run start:prod
+          wait-on: 'http://localhost:4000'
+          wait-on-timeout: 60
+          browser: chrome
+        env:
+          MONGODB_URL: ${{ secrets.MONGODB_URL }}
+          SESSION_SECRET: ${{ secrets.SESSION_SECRET }}
+
+  # ────────────────────────────────────────────────────────────────────────────
+  # STAGE 2: CD (Deployment)
+  # ────────────────────────────────────────────────────────────────────────────
+  deploy-staging:
+    name: Deploy to Staging
+    needs: ci-tests
+    runs-on: ubuntu-latest
+    # Only deploy on push to cd_role
+    if: github.event_name == 'push' && github.ref == 'refs/heads/cd_role'
+    environment:
+      name: staging
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+      - name: Install production dependencies
+        run: npm ci --omit=dev --legacy-peer-deps
+      - name: Deploy to Azure (Staging)
+        uses: azure/webapps-deploy@v2
+        with:
+          app-name: ${{ secrets.AZURE_APP_NAME_STAGING }}
+          publish-profile: ${{ secrets.AZURE_PUBLISH_PROFILE_STAGING }}
+          package: .
+
+  deploy-production:
+    name: Deploy to Production
+    needs: ci-tests
+    runs-on: ubuntu-latest
+    # Only deploy on push to main
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    environment:
+      name: production
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+      - name: Install production dependencies
+        run: npm ci --omit=dev --legacy-peer-deps
+      - name: Deploy to Azure (Production)
+        uses: azure/webapps-deploy@v2
+        with:
+          app-name: ${{ secrets.AZURE_APP_NAME_PRODUCTION }}
+          publish-profile: ${{ secrets.AZURE_PUBLISH_PROFILE_PRODUCTION }}
+          package: .

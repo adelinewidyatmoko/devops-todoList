@@ -42,7 +42,7 @@ jobs:
       (github.event_name == 'workflow_dispatch' && inputs.environment == 'staging')
     environment:
       name: staging
-      url: https://${{ secrets.AZURE_APP_NAME_STAGING }}.azurewebsites.net
+      url: https://placeholder-staging.azurewebsites.net
 
     steps:
       - name: Checkout code
@@ -76,7 +76,7 @@ jobs:
       (github.event_name == 'workflow_dispatch' && inputs.environment == 'production')
     environment:
       name: production
-      url: https://${{ secrets.AZURE_APP_NAME_PRODUCTION }}.azurewebsites.net
+      url: https://placeholder-production.azurewebsites.net
 
     steps:
       - name: Checkout code

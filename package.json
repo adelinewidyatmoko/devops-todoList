@@ -6,6 +6,7 @@
   "scripts": {
     "test": "jest --detectOpenHandles",
     "start": "nodemon index.js",
+    "start:prod": "node index.js",
     "build": "echo 'No build step needed for this Node.js app'",
     "lint": "eslint \"**/*.js\"",
     "format": "prettier --write \"**/*.{js,css,ejs,json}\"",

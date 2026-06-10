@@ -103,6 +103,6 @@ describe('Todo App End-to-End Tests', () => {
     // 8. click the google calendar link
     cy.get('.shopping-category-list')
       .find('.calendar-task-section')
-      .click({  force: true });
+      .click({ force: true });
   });
 });

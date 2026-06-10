@@ -1,84 +1,70 @@
 <html>
-  <head>
-    <title>Login | Todos</title>
 
-    <link rel="stylesheet" href="/css/login.css" />
+<head>
+  <title>Login | Todos</title>
 
-    <link
-      rel="icon"
-      href="https://cdn-icons-png.flaticon.com/512/7692/7692809.png"
-    />
-  </head>
+  <link rel="stylesheet" href="/css/login.css" />
 
-  <body>
-    <!-- NAVBAR -->
-    <canvas id="snow-canvas"></canvas>
-    <div class="nav">
-      <div class="nav-logo-section">
-        <a href="/">
-          <img
-            src="https://cdn-icons-png.flaticon.com/512/9802/9802618.png"
-            alt=""
-            class="nav-logo"
-          />
-        </a>
+  <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/7692/7692809.png" />
+</head>
 
-        <a href="/">
-          <span class="nav-logo-name">Todos.</span>
-        </a>
-      </div>
+<body>
+  <!-- NAVBAR -->
+  <canvas id="snow-canvas"></canvas>
+  <div class="nav">
+    <div class="nav-logo-section">
+      <a href="/">
+        <img src="https://cdn-icons-png.flaticon.com/512/9802/9802618.png" alt="" class="nav-logo" />
+      </a>
 
-      <div class="login-signup-section">
-        <a href="/register" class="nav-register"> Sign Up </a>
-      </div>
+      <a href="/">
+        <span class="nav-logo-name">Todos.</span>
+      </a>
     </div>
 
-    <!-- MAIN -->
+    <div class="login-signup-section">
+      <a href="/register" class="nav-register"> Sign Up </a>
+    </div>
+  </div>
 
-    <div class="login-main-container">
-      <div class="login-card">
-        <h1 class="login-heading">Welcome Back</h1>
+  <!-- MAIN -->
 
-        <p class="login-subheading">Login and continue your task journey.</p>
+  <div class="login-main-container">
+    <div class="login-card">
+      <h1 class="login-heading">Welcome Back</h1>
 
-        <form action="/api/login" method="post">
-          <div class="input-section">
-            <input
-              type="email"
-              name="email"
-              placeholder="Enter Email"
-              required
-            />
-          </div>
+      <p class="login-subheading">Login and continue your task journey.</p>
 
-          <div class="input-section">
-            <input
-              type="password"
-              name="password"
-              placeholder="Enter Password"
-              required
-            />
-          </div>
-
-          <button type="submit" class="login-button">Login</button>
-        </form>
-
-        <div class="register-link-section">
-          Don't have an account?
-          <a href="/register">Sign Up</a>
+      <form action="/api/login" method="post">
+        <div class="input-section">
+          <input type="email" name="email" placeholder="Enter Email" required />
         </div>
+
+        <div class="input-section">
+          <input type="password" name="password" placeholder="Enter Password" required />
+        </div>
+
+        <button type="submit" class="login-button">Login</button>
+      </form>
+
+      <div class="register-link-section">
+        Don't have an account?
+        <a href="/register">Sign Up</a>
       </div>
     </div>
+  </div>
 
-    <!-- BACKGROUND ELEMENTS -->
+  <!-- BACKGROUND ELEMENTS -->
 
-    <div class="element1"></div>
-    <div class="element2"></div>
-    <div class="element3"></div>
+  <div class="element1"></div>
+  <div class="element2"></div>
+  <div class="element3"></div>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-    <script src="/js/effect-config.js"></script>
-    <script src="/js/add-features/snow.js"></script>
-    <script src="/js/add-features/autumn.js"></script>
-  </body>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script src="/js/effect-config.js"></script>
+  <script src="/js/add-features/snow.js"></script>
+  <script src="/js/add-features/autumn.js"></script>
+  <script src="/js/add-features/summer.js"></script>
+</body>
+
 </html>

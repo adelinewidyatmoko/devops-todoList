@@ -40,7 +40,7 @@ describe('Todo App End-to-End Tests', () => {
     cy.get('.add-new-task').first().click({ force: true });
 
     // 11. click the category dropdown and select "Shopping"
-    // Using { multiple: true, force: true } in case there are multiple category dropdowns rendered
+
     cy.get('#shopping-category').click({ force: true });
 
     // 12. click checkbox or mark test completed
@@ -103,6 +103,6 @@ describe('Todo App End-to-End Tests', () => {
     // 8. click the google calendar link
     cy.get('.shopping-category-list')
       .find('.calendar-task-section')
-      .click({ multiple: true, force: true });
+      .click({  force: true });
   });
 });

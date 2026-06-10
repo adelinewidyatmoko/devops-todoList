@@ -5,7 +5,9 @@ require('dotenv').config({ path: path.resolve(__dirname, '../.env') });
 // require mongoose
 const mongoose = require('mongoose');
 // connect to database
-const dbUrl = String(process.env.MONGODB_URL || '');
+const dbUrl = String(
+  process.env.MONGODB_URL || process.env.MONGODB_URI || process.env.MONGO_URI
+);
 
 console.log('checking the database connection', typeof dbUrl);
 // acquire the connection (to check if it is successful)

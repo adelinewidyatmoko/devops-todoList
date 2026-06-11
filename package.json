@@ -23,6 +23,7 @@
   },
   "homepage": "https://github.com/Ankit6098/TO-DO-List-NodeJs#readme",
   "dependencies": {
+    "applicationinsights": "^3.15.0",
     "bcrypt": "^6.0.0",
     "dotenv": "16.3.1",
     "ejs": "3.1.8",

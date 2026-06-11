@@ -1,6 +1,7 @@
 // routes/api.js
 const express = require('express');
 const router = express.Router();
+const appInsights = require('applicationinsights');
 
 // Import the schemas right here where they are used
 const User = require('../models/register');
@@ -70,9 +71,24 @@ router.post('/register', async (req, res) => {
 
     console.log('Successfully Created user!', user);
 
+    if (appInsights.defaultClient) {
+      appInsights.defaultClient.trackEvent({
+        name: 'RegisterSuccess',
+        properties: { email: req.body.email },
+      });
+    }
+
     res.redirect('/login');
   } catch (err) {
     console.log(err);
+
+    if (appInsights.defaultClient) {
+      appInsights.defaultClient.trackEvent({
+        name: 'RegisterFailure',
+        properties: { email: req.body.email, error: err.message },
+      });
+      appInsights.defaultClient.trackException({ exception: err });
+    }
 
     res.send('Register failed');
   }
@@ -96,6 +112,12 @@ router.post('/login', async (req, res) => {
     });
 
     if (!user) {
+      if (appInsights.defaultClient) {
+        appInsights.defaultClient.trackEvent({
+          name: 'LoginFailure',
+          properties: { email, reason: 'user_not_found' },
+        });
+      }
       return res.send('User not found');
     }
 
@@ -103,6 +125,12 @@ router.post('/login', async (req, res) => {
     const isMatch = await bcrypt.compare(password, user.password);
 
     if (!isMatch) {
+      if (appInsights.defaultClient) {
+        appInsights.defaultClient.trackEvent({
+          name: 'LoginFailure',
+          properties: { email, reason: 'wrong_password' },
+        });
+      }
       return res.send('Wrong password');
     }
 
@@ -112,9 +140,24 @@ router.post('/login', async (req, res) => {
       email: user.email,
     };
 
+    if (appInsights.defaultClient) {
+      appInsights.defaultClient.trackEvent({
+        name: 'LoginSuccess',
+        properties: { email },
+      });
+    }
+
     res.redirect('/dashboard');
   } catch (err) {
     console.log(err);
+
+    if (appInsights.defaultClient) {
+      appInsights.defaultClient.trackEvent({
+        name: 'LoginFailure',
+        properties: { email: req.body.email, error: err.message, reason: 'exception' },
+      });
+      appInsights.defaultClient.trackException({ exception: err });
+    }
 
     res.send('Login failed');
   }
@@ -131,10 +174,19 @@ router.post('/addtask', function (req, res) {
   })
     .then((newTask) => {
       console.log('Successfully Created Task!', newTask);
+      if (appInsights.defaultClient) {
+        appInsights.defaultClient.trackEvent({
+          name: 'TaskCreated',
+          properties: { category: req.body.categoryChoosed, taskId: String(newTask._id) },
+        });
+      }
       res.redirect('back');
     })
     .catch((err) => {
       console.error('Error Creating Task!!', err);
+      if (appInsights.defaultClient) {
+        appInsights.defaultClient.trackException({ exception: err });
+      }
       res.redirect('back');
     });
 });
@@ -145,10 +197,19 @@ router.get('/complete-task', function (req, res) {
   Dashboard.findByIdAndUpdate(id, { completed: true })
     .then((newTask) => {
       console.log('Successfully Completed Task!', newTask);
+      if (appInsights.defaultClient) {
+        appInsights.defaultClient.trackEvent({
+          name: 'TaskCompleted',
+          properties: { taskId: id },
+        });
+      }
       res.redirect('back');
     })
     .catch((err) => {
       console.error('Error Completing Task!!', err);
+      if (appInsights.defaultClient) {
+        appInsights.defaultClient.trackException({ exception: err });
+      }
       res.redirect('back');
     });
 });
@@ -185,10 +246,19 @@ router.get('/delete-task', function (req, res) {
   Dashboard.findByIdAndDelete(id)
     .then((newTask) => {
       console.log('Successfully Deleted Task!', newTask);
+      if (appInsights.defaultClient) {
+        appInsights.defaultClient.trackEvent({
+          name: 'TaskDeleted',
+          properties: { taskId: id },
+        });
+      }
       res.redirect('back');
     })
     .catch((err) => {
       console.error('Error Deleting Task!!', err);
+      if (appInsights.defaultClient) {
+        appInsights.defaultClient.trackException({ exception: err });
+      }
       res.redirect('back');
     });
 });

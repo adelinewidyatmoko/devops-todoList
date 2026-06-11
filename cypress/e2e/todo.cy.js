@@ -1,4 +1,12 @@
 describe('Todo App End-to-End Tests', () => {
+  let email;
+  let password;
+
+  before(() => {
+    email = `test_${Date.now()}@example.com`;
+    password = 'Password123';
+  });
+
   // Visit the home page before every test
   beforeEach(() => {
     cy.visit('/');
@@ -6,77 +14,84 @@ describe('Todo App End-to-End Tests', () => {
   });
 
   it('should login, navigate to dashboard, and add a new pending task', () => {
-    // 1. We are on the Home Page. Click the login button in the Nav bar
-    // Added .first() in case there is a mobile and desktop navigation login button
-    cy.get('.nav-login').first().click({ force: true });
+    // 1. We are on the Home Page. Click the Sign Up button in the Nav bar
+    cy.get('.nav-register').first().click({ force: true });
 
-    // 2. We should now be on the Login page.
-    cy.get('input[name="email"]').type('hafizhan@example.com');
-    cy.get('input[name="password"]').type('hafizhan123');
+    // 2. We should now be on the Register page. Fill out the registration details:
+    cy.get('input[name="name"]').type('Test');
+    cy.get('input[name="lastName"]').type('User');
+    cy.get('input[name="phone"]').type('1234567890');
+    cy.get('input[name="email"]').type(email);
+    cy.get('input[name="password"]').type(password);
     cy.get('button[type="submit"]').first().click({ force: true });
 
-    // 3. After login, we should be redirected to the dashboard!
+    // 3. After registering, we should be redirected to the login page. Log in:
+    cy.url().should('include', '/login');
+    cy.get('input[name="email"]').type(email);
+    cy.get('input[name="password"]').type(password);
+    cy.get('button[type="submit"]').first().click({ force: true });
+
+    // 4. After login, we should be redirected to the dashboard!
     cy.url().should('include', '/dashboard');
 
-    // 4. On the dashboard, click the button to open the Add Task modal
+    // 5. On the dashboard, click the button to open the Add Task modal
     cy.get('.add-task-button').first().click({ force: true });
 
-    // 5. NOW we can find the task input and type a task
+    // 6. NOW we can find the task input and type a task
     cy.get('.input-task').type('Buy groceries for the week');
 
-    // 6. Find the description and type a description
+    // 7. Find the description and type a description
     cy.get('#description').type('Milk, Eggs, Bread, and Coffee');
 
-    // 7. Select the "Shopping" category via its ID
+    // 8. Select the "Shopping" category via its ID
     cy.get('#shopping').first().click({ force: true });
 
-    // 8. Select the date input and choose a date (e.g., 2024-12-31)
+    // 9. Select the date input and choose a date (e.g., 2026-06-30)
     cy.get('.input-date').type('2026-06-30');
 
-    // 9. Select time input
+    // 10. Select time input
     cy.get('.input-time').type('10:30');
 
-    // 10. Submit the form by clicking the "Add New Task" button
+    // 11. Submit the form by clicking the "Add New Task" button
     cy.get('.add-new-task').first().click({ force: true });
 
-    // 11. click the category dropdown and select "Shopping"
-
+    // 12. click the category dropdown and select "Shopping"
     cy.get('#shopping-category').click({ force: true });
 
-    // 12. click checkbox or mark test completed
+    // 13. click checkbox or mark test completed
     cy.get('.shopping-category-list').find('.complete-task-section').click();
 
-    // 13. go to completed task page
+    // 14. go to completed task page
     cy.get('.leftside-nav-ul li').contains('Completed Tasks').click();
 
-    // 14. check if the completed task is visible in the completed task page
+    // 15. check if the completed task is visible in the completed task page
     cy.get('#shopping-category').click({ multiple: true, force: true });
 
-    // 15. shpping visible
+    // 16. shopping visible
     cy.get('.shopping-category-list').should(
       'contain',
       'Buy groceries for the week'
     );
 
-    // 16. go to all task page
+    // 17. go to all task page
     cy.get('.leftside-nav-ul li').contains('All Tasks').click({ force: true });
 
-    // 17. chek the shopping category is visible in the all task page
+    // 18. check the shopping category is visible in the all task page
     cy.get('#shopping-category').click({ multiple: true, force: true });
 
-    // 18. check if the completed task is visible in the all task page
+    // 19. check if the completed task is visible in the all task page
     cy.get('.shopping-category-list').should(
       'contain',
       'Buy groceries for the week'
     );
 
-    // 19. delete the task
+    // 20. delete the task
     cy.get('.shopping-category-list').find('.delete-task-section').click();
 
-    // 20. check the total task
+    // 21. check the total task
     cy.get('#shopping-category').first().should('contain', '0 Tasks');
 
-    // B. finally check the google calender link
+    // B. finally check the google calendar link
     cy.get('.add-task-button').first().click({ force: true });
 
     // 1.  NOW we can find the task input and type a task
@@ -88,7 +103,7 @@ describe('Todo App End-to-End Tests', () => {
     // 3. Select the "Shopping" category via its ID
     cy.get('#shopping').first().click({ force: true });
 
-    // 4. Select the date input and choose a date (e.g., 2024-12-31)
+    // 4. Select the date input and choose a date (e.g., 2026-06-30)
     cy.get('.input-date').first().type('2026-06-30');
 
     // 5. Select time input

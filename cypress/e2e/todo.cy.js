@@ -52,7 +52,7 @@ describe('Todo App End-to-End Tests', () => {
     cy.get('.leftside-nav-ul li').contains('Completed Tasks').click();
 
     // 14. check if the completed task is visible in the completed task page
-    cy.get('#shopping-category').click({ multiple: true, force: true });
+    cy.get('#shopping-category').first().click({ force: true });
 
     // 15. shpping visible
     cy.get('.shopping-category-list').should(
@@ -64,7 +64,7 @@ describe('Todo App End-to-End Tests', () => {
     cy.get('.leftside-nav-ul li').contains('All Tasks').click({ force: true });
 
     // 17. chek the shopping category is visible in the all task page
-    cy.get('#shopping-category').click({ multiple: true, force: true });
+    cy.get('#shopping-category').first().click({ force: true });
 
     // 18. check if the completed task is visible in the all task page
     cy.get('.shopping-category-list').should(
@@ -78,8 +78,8 @@ describe('Todo App End-to-End Tests', () => {
       .first()
       .click();
 
-    // 20. check the total task
-    cy.get('#shopping-category').first().should('contain', '0 Tasks');
+    // // 20. check the total task
+    cy.get('.category-section-right').first().should('contain', '0 Tasks');
 
     // B. finally check the google calender link
     cy.get('.add-task-button').first().click({ force: true });

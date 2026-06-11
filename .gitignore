@@ -1,7 +1,8 @@
 node_modules/
 .env
-.env.*
+.env.local
 !.env.example
 /assets/js/add-features/snow.js
 /assets/js/add-features/autumn.js
 /assets/js/add-features/summer.js
+.env

@@ -31,7 +31,7 @@ describe('Todo App End-to-End Tests', () => {
     cy.get('#shopping').first().click({ force: true });
 
     // 8. Select the date input and choose a date (e.g., 2024-12-31)
-    cy.get('.input-date').type('2026-06-08');
+    cy.get('.input-date').type('2026-06-14');
 
     // 9. Select time input
     cy.get('.input-time').type('10:30');
@@ -40,8 +40,8 @@ describe('Todo App End-to-End Tests', () => {
     cy.get('.add-new-task').first().click({ force: true });
 
     // 11. click the category dropdown and select "Shopping"
-    // Using { multiple: true, force: true } in case there are multiple category dropdowns rendered
-    cy.get('#shopping-category').click({ multiple: true, force: true });
+
+    cy.get('#shopping-category').click({ force: true });
 
     // 12. click checkbox or mark test completed
     cy.get('.shopping-category-list').find('.complete-task-section').click();
@@ -89,7 +89,7 @@ describe('Todo App End-to-End Tests', () => {
     cy.get('#shopping').first().click({ force: true });
 
     // 4. Select the date input and choose a date (e.g., 2024-12-31)
-    cy.get('.input-date').first().type('2026-06-08');
+    cy.get('.input-date').first().type('2026-06-14');
 
     // 5. Select time input
     cy.get('.input-time').first().type('10:30');
@@ -103,6 +103,6 @@ describe('Todo App End-to-End Tests', () => {
     // 8. click the google calendar link
     cy.get('.shopping-category-list')
       .find('.calendar-task-section')
-      .click({ multiple: true, force: true });
+      .click({ force: true });
   });
 });

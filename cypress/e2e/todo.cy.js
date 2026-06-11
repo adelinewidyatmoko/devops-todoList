@@ -1,7 +1,7 @@
 describe('Todo App End-to-End Tests', () => {
   // Visit the home page before every test
   beforeEach(() => {
-    cy.visit('/');
+    cy.visit('http://localhost:4000');
     cy.viewport(1280, 800);
   });
 

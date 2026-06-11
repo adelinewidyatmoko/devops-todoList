@@ -41,7 +41,7 @@ describe('Todo App End-to-End Tests', () => {
 
     // 11. click the category dropdown and select "Shopping"
 
-    cy.get('#shopping-category').click({ force: true });
+    cy.get('#shopping-category').click({ multiple: true, force: true });
 
     // 12. click checkbox or mark test completed
     cy.get('.shopping-category-list').find('.complete-task-section').click();

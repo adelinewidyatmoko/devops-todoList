@@ -13,7 +13,7 @@ describe('Todo App End-to-End Tests', () => {
     // 2. We should now be on the Login page.
     cy.get('input[name="email"]').type('hafizhan@example.com');
     cy.get('input[name="password"]').type('hafizhan123');
-    cy.get('button[type="submit"]').first().click({ force: true });
+    cy.get('button[type="submit"]').first().click();
 
     // 3. After login, we should be redirected to the dashboard!
     cy.url().should('include', '/dashboard');

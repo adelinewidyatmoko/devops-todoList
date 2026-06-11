@@ -11,9 +11,9 @@ describe('Todo App End-to-End Tests', () => {
     cy.get('.nav-login').first().click({ force: true });
 
     // 2. We should now be on the Login page.
-    cy.get('input[name="email"]').type('hafizhan@example.com');
-    cy.get('input[name="password"]').type('hafizhan123');
-    cy.get('button[type="submit"]').first().click();
+    cy.get('input[name="email"]').type('adeline@gmail.com');
+    cy.get('input[name="password"]').type('12345');
+    cy.get('button[type="submit"]').first().click({ force: true });
 
     // 3. After login, we should be redirected to the dashboard!
     cy.url().should('include', '/dashboard');
@@ -31,7 +31,7 @@ describe('Todo App End-to-End Tests', () => {
     cy.get('#shopping').first().click({ force: true });
 
     // 8. Select the date input and choose a date (e.g., 2024-12-31)
-    cy.get('.input-date').type('2026-06-30');
+    cy.get('.input-date').type('2026-06-14');
 
     // 9. Select time input
     cy.get('.input-time').type('10:30');
@@ -89,7 +89,7 @@ describe('Todo App End-to-End Tests', () => {
     cy.get('#shopping').first().click({ force: true });
 
     // 4. Select the date input and choose a date (e.g., 2024-12-31)
-    cy.get('.input-date').first().type('2026-06-30');
+    cy.get('.input-date').first().type('2026-06-14');
 
     // 5. Select time input
     cy.get('.input-time').first().type('10:30');

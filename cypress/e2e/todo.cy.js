@@ -40,10 +40,13 @@ describe('Todo App End-to-End Tests', () => {
     cy.get('.add-new-task').first().click({ force: true });
 
     // 11. click the category dropdown and select "Shopping"
-    cy.get('#shopping-category').click({  force: true });
+    cy.get('#shopping-category').click({ force: true });
 
     // 12. click checkbox or mark test completed
-    cy.get('.shopping-category-list').find('.complete-task-section').first().click();
+    cy.get('.shopping-category-list')
+      .find('.complete-task-section')
+      .first()
+      .click();
 
     // 13. go to completed task page
     cy.get('.leftside-nav-ul li').contains('Completed Tasks').click();
@@ -70,7 +73,10 @@ describe('Todo App End-to-End Tests', () => {
     );
 
     // 19. delete the task
-    cy.get('.shopping-category-list').find('.delete-task-section').first().click();
+    cy.get('.shopping-category-list')
+      .find('.delete-task-section')
+      .first()
+      .click();
 
     // 20. check the total task
     cy.get('#shopping-category').first().should('contain', '0 Tasks');

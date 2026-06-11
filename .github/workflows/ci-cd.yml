@@ -55,12 +55,13 @@ jobs:
         uses: cypress-io/github-action@v5
         env:
           MONGODB_URL: ${{ secrets.MONGODB_URL }}
-          CYPRESS_BASE_URL: http://localhost:${{env.PORT}}
+          PORT: ${{ env.PORT }}
+          CYPRESS_BASE_URL: http://localhost:${{ env.PORT }}
         with:
           # Tell cypress to ignore peer dependency conflicts during install
           install-command: npm ci --legacy-peer-deps
           start: npm start
-          wait-on: 'http://localhost:${{env.PORT}}'
+          wait-on: 'http://localhost:${{ env.PORT }}'
 
       - name: Build Next.js application
         run: npm run build

@@ -32,6 +32,11 @@ git checkout cd_role
 git fetch origin
 git merge origin/ci_role
 
+# after edit, run these tests
+npm run lint
+npx prettier --write .
+npx cypress open
+
 # Push to trigger Staging Deployment
 git push origin cd_role
 ```

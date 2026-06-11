@@ -154,7 +154,11 @@ router.post('/login', async (req, res) => {
     if (appInsights.defaultClient) {
       appInsights.defaultClient.trackEvent({
         name: 'LoginFailure',
-        properties: { email: req.body.email, error: err.message, reason: 'exception' },
+        properties: {
+          email: req.body.email,
+          error: err.message,
+          reason: 'exception',
+        },
       });
       appInsights.defaultClient.trackException({ exception: err });
     }
@@ -177,7 +181,10 @@ router.post('/addtask', function (req, res) {
       if (appInsights.defaultClient) {
         appInsights.defaultClient.trackEvent({
           name: 'TaskCreated',
-          properties: { category: req.body.categoryChoosed, taskId: String(newTask._id) },
+          properties: {
+            category: req.body.categoryChoosed,
+            taskId: String(newTask._id),
+          },
         });
       }
       res.redirect('back');

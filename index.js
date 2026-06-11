@@ -58,7 +58,10 @@ process.on('uncaughtException', (err) => {
 process.on('unhandledRejection', (reason) => {
   console.error('unhandledRejection', reason);
   if (appInsights.defaultClient) {
-    appInsights.defaultClient.trackException({ exception: typeof reason === 'object' ? reason : new Error(String(reason)) });
+    appInsights.defaultClient.trackException({
+      exception:
+        typeof reason === 'object' ? reason : new Error(String(reason)),
+    });
   }
 });
 

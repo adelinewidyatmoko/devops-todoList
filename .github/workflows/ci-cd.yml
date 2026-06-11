@@ -56,6 +56,7 @@ jobs:
         env:
           MONGODB_URL: ${{ secrets.MONGODB_URL }}
           PORT: 4000
+          CYPRESS_BASE_URL: http://localhost:4000
         with:
           # Tell cypress to ignore peer dependency conflicts during install
           install-command: npm ci --legacy-peer-deps

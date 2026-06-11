@@ -9,11 +9,12 @@ This project is a To-Do List application built with **Node.js**, **Express**, an
 We use a unified pipeline defined in `.github/workflows/ci-cd.yml` that handles quality checks, testing, and deployment.
 
 ### Pipeline Flow:
+
 1.  **Code Quality**: Automatic Linting & Formatting checks.
 2.  **Automated Testing**: Unit tests (Jest) to ensure logic integrity.
 3.  **Deployment**:
-    *   **Staging**: Triggered on push to `cd_role`.
-    *   **Production**: Triggered on push to `main`.
+    - **Staging**: Triggered on push to `cd_role`.
+    - **Production**: Triggered on push to `main`.
 
 ---
 
@@ -22,7 +23,9 @@ We use a unified pipeline defined in `.github/workflows/ci-cd.yml` that handles 
 To maintain a stable production environment, follow this workflow:
 
 ### 1. Update Staging from Developer Branch
+
 If changes are ready in `ci_role` (from other team members), merge them into your staging branch:
+
 ```powershell
 # Switch to staging branch
 git checkout cd_role
@@ -34,7 +37,9 @@ git push origin cd_role
 ```
 
 ### 2. Promote Staging to Production
+
 Once the Staging environment is verified and working perfectly:
+
 ```powershell
 # Switch to production branch
 git checkout main
@@ -52,27 +57,29 @@ git push origin main --force
 
 The application requires specific variables to be set in the **Azure Portal (Environment Variables)** for both Staging and Production App Services:
 
-| Variable Name | Description |
-| :--- | :--- |
-| `MONGODB_URL` | Connection string to Azure Cosmos DB |
+| Variable Name    | Description                                                     |
+| :--------------- | :-------------------------------------------------------------- |
+| `MONGODB_URL`    | Connection string to Azure Cosmos DB                            |
 | `SESSION_SECRET` | A secret string for session security (can be any random string) |
-| `PORT` | Set to `8080` (App handles this automatically) |
+| `PORT`           | Set to `8080` (App handles this automatically)                  |
 
 ---
 
 ## 🧪 Local Development
 
 ### Prerequisites
+
 - Node.js (v22 or above)
 - MongoDB / Cosmos DB instance
 
 ### Setup
+
 1. **Clone & Install**:
    ```bash
    npm install
    ```
 2. **Environment**: Create a `.env` file with `MONGODB_URL` and `SESSION_SECRET`.
-3. **Run**: 
+3. **Run**:
    ```bash
    npm start
    ```
@@ -80,6 +87,7 @@ The application requires specific variables to be set in the **Azure Portal (Env
 ---
 
 ## 📈 Current Project Status
+
 - [x] Unified CI/CD Pipeline (`ci-cd.yml`)
 - [x] Azure Staging Site - **Live**
 - [x] Azure Production Site - **Live**

@@ -1,7 +1,7 @@
 describe('Todo App End-to-End Tests', () => {
   // Visit the home page before every test
   beforeEach(() => {
-    cy.visit('http://localhost:4000');
+    cy.visit('/');
     cy.viewport(1280, 800);
   });
 
@@ -11,8 +11,8 @@ describe('Todo App End-to-End Tests', () => {
     cy.get('.nav-login').first().click({ force: true });
 
     // 2. We should now be on the Login page.
-    cy.get('input[name="email"]').type('adeline@gmail.com');
-    cy.get('input[name="password"]').type('12345');
+    cy.get('input[name="email"]').type('hafizhan@example.com');
+    cy.get('input[name="password"]').type('hafizhan123');
     cy.get('button[type="submit"]').first().click({ force: true });
 
     // 3. After login, we should be redirected to the dashboard!

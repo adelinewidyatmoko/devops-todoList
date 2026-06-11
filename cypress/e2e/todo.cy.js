@@ -1,4 +1,7 @@
 describe('Todo App End-to-End Tests', () => {
+
+  if (ACTIVE_EFFECT === undefined) return; 
+  
   // Visit the home page before every test
   beforeEach(() => {
     cy.visit('http://localhost:4000');

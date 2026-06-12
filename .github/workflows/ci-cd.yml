@@ -1,0 +1,122 @@
+name: CI/CD - Unified Pipeline
+
+on:
+  push:
+    branches: [ci_role, cd_role, main]
+  pull_request:
+    branches: [ci_role, cd_role, main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  # ────────────────────────────────────────────────────────────────────────────
+  # STAGE 1: CI (Quality Checks & Testing)
+  # ────────────────────────────────────────────────────────────────────────────
+  ci-quality:
+    name: Code Quality (Lint & Format)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+      - name: Install dependencies
+        run: npm ci --legacy-peer-deps
+      - name: Check Formatting
+        run: npm run format:check
+      - name: Lint Code
+        run: npm run lint
+
+      #     # 4. Code Quality: Check formatting with Prettier
+      - name: Check Formatting (Prettier)
+        run: npx prettier --check .
+
+      # 5. Code Quality: Run ESLint
+      - name: Lint Code (ESLint)
+        run: npx eslint "**/*.js"
+
+      # Added: Good CI should always run your test suite
+      - name: Run Tests
+        run: npm test
+        env:
+          MONGODB_URL: ${{ secrets.MONGODB_URL }}
+      # e2e test
+      - name: Run Cypress E2E  tests
+        uses: cypress-io/github-action@v5
+        env:
+          MONGODB_URL: ${{ secrets.MONGODB_URL }}
+        with:
+          # Tell cypress to ignore peer dependency conflicts during install
+          install-command: npm ci --legacy-peer-deps
+          start: npm start
+          wait-on: 'http://localhost:4000'
+
+          #3 run JEST COVERAGE
+      - name: Generate Unit Test Coverage Report
+        run: npm run test:coverage
+
+        # --- STEP 2: INJECT VISUAL SUMMARY DIRECTLY INTO THE PULL REQUEST (Zero-config) ---
+      - name: Comment Coverage on Pull Request
+        if: github.event_name == 'pull_request'
+        uses: ArtiomTr/jest-coverage-report-action@v2
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          threshold: 80 # Will mark the workflow check failure if coverage is below 80%
+
+  # ────────────────────────────────────────────────────────────────────────────
+  # STAGE 2: CD (Deployment)
+  # ────────────────────────────────────────────────────────────────────────────
+  deploy-staging:
+    name: Deploy to Staging
+    #    needs: ci-tests
+    needs: ci-quality # Changed from ci-tests to ci-quality to skip E2E
+    runs-on: ubuntu-latest
+    # Only deploy on push to cd_role
+    if: github.event_name == 'push' && github.ref == 'refs/heads/cd_role'
+    environment:
+      name: staging
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+      - name: Install production dependencies
+        run: npm ci --omit=dev --legacy-peer-deps
+      - name: Deploy to Azure (Staging)
+        uses: azure/webapps-deploy@v2
+        with:
+          app-name: ${{ secrets.AZURE_APP_NAME_STAGING }}
+          publish-profile: ${{ secrets.AZURE_PUBLISH_PROFILE_STAGING }}
+          package: .
+
+  deploy-production:
+    name: Deploy to Production
+    #    needs: ci-tests
+    needs: ci-quality # Changed from ci-tests to ci-quality to skip E2E
+    runs-on: ubuntu-latest
+    # Only deploy on push to main
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    environment:
+      name: production
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+      - name: Install production dependencies
+        run: npm ci --omit=dev --legacy-peer-deps
+      - name: Deploy to Azure (Production)
+        uses: azure/webapps-deploy@v2
+        with:
+          app-name: ${{ secrets.AZURE_APP_NAME_PRODUCTION }}
+          publish-profile: ${{ secrets.AZURE_PUBLISH_PROFILE_PRODUCTION }}
+          package: .

@@ -2,9 +2,9 @@ name: CI/CD - Unified Pipeline
 
 on:
   push:
-    branches: [ci_role, cd_role, main]
+    branches: [ci_role]
   pull_request:
-    branches: [ci_role, cd_role, main]
+    branches: [ci_role]
   workflow_dispatch:
 
 permissions:
@@ -101,7 +101,7 @@ jobs:
     #    needs: ci-tests
     needs: ci-quality # Changed from ci-tests to ci-quality to skip E2E
     runs-on: ubuntu-latest
-   
+
     environment:
       name: production
     steps:

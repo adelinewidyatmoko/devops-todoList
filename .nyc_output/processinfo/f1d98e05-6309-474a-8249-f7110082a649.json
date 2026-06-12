@@ -1,1 +1,28 @@
-{"parent":"4d5eb79a-7c7f-4aa3-afa7-9a50eaf2315a","pid":65330,"argv":["/opt/homebrew/Cellar/node/25.9.0_2/bin/node","/Users/mariaadelinemaharaniwidyatmoko/Desktop/devops/Todo-List-nodejs/index.js"],"execArgv":[],"cwd":"/Users/mariaadelinemaharaniwidyatmoko/Desktop/devops/Todo-List-nodejs","time":1781238502545,"ppid":61719,"coverageFilename":"/Users/mariaadelinemaharaniwidyatmoko/Desktop/devops/Todo-List-nodejs/.nyc_output/f1d98e05-6309-474a-8249-f7110082a649.json","externalId":"","uuid":"f1d98e05-6309-474a-8249-f7110082a649","files":["/Users/mariaadelinemaharaniwidyatmoko/Desktop/devops/Todo-List-nodejs/index.js","/Users/mariaadelinemaharaniwidyatmoko/Desktop/devops/Todo-List-nodejs/config/mongoose.js","/Users/mariaadelinemaharaniwidyatmoko/Desktop/devops/Todo-List-nodejs/routes/index1.js","/Users/mariaadelinemaharaniwidyatmoko/Desktop/devops/Todo-List-nodejs/controllers/homeController.js","/Users/mariaadelinemaharaniwidyatmoko/Desktop/devops/Todo-List-nodejs/controllers/dashboardController.js","/Users/mariaadelinemaharaniwidyatmoko/Desktop/devops/Todo-List-nodejs/models/dashboard.js","/Users/mariaadelinemaharaniwidyatmoko/Desktop/devops/Todo-List-nodejs/controllers/registerController.js","/Users/mariaadelinemaharaniwidyatmoko/Desktop/devops/Todo-List-nodejs/controllers/alltaskController.js","/Users/mariaadelinemaharaniwidyatmoko/Desktop/devops/Todo-List-nodejs/controllers/completedtaskController.js","/Users/mariaadelinemaharaniwidyatmoko/Desktop/devops/Todo-List-nodejs/routes/api.js","/Users/mariaadelinemaharaniwidyatmoko/Desktop/devops/Todo-List-nodejs/models/register.js"]}
+{
+  "parent": "4d5eb79a-7c7f-4aa3-afa7-9a50eaf2315a",
+  "pid": 65330,
+  "argv": [
+    "/opt/homebrew/Cellar/node/25.9.0_2/bin/node",
+    "/Users/mariaadelinemaharaniwidyatmoko/Desktop/devops/Todo-List-nodejs/index.js"
+  ],
+  "execArgv": [],
+  "cwd": "/Users/mariaadelinemaharaniwidyatmoko/Desktop/devops/Todo-List-nodejs",
+  "time": 1781238502545,
+  "ppid": 61719,
+  "coverageFilename": "/Users/mariaadelinemaharaniwidyatmoko/Desktop/devops/Todo-List-nodejs/.nyc_output/f1d98e05-6309-474a-8249-f7110082a649.json",
+  "externalId": "",
+  "uuid": "f1d98e05-6309-474a-8249-f7110082a649",
+  "files": [
+    "/Users/mariaadelinemaharaniwidyatmoko/Desktop/devops/Todo-List-nodejs/index.js",
+    "/Users/mariaadelinemaharaniwidyatmoko/Desktop/devops/Todo-List-nodejs/config/mongoose.js",
+    "/Users/mariaadelinemaharaniwidyatmoko/Desktop/devops/Todo-List-nodejs/routes/index1.js",
+    "/Users/mariaadelinemaharaniwidyatmoko/Desktop/devops/Todo-List-nodejs/controllers/homeController.js",
+    "/Users/mariaadelinemaharaniwidyatmoko/Desktop/devops/Todo-List-nodejs/controllers/dashboardController.js",
+    "/Users/mariaadelinemaharaniwidyatmoko/Desktop/devops/Todo-List-nodejs/models/dashboard.js",
+    "/Users/mariaadelinemaharaniwidyatmoko/Desktop/devops/Todo-List-nodejs/controllers/registerController.js",
+    "/Users/mariaadelinemaharaniwidyatmoko/Desktop/devops/Todo-List-nodejs/controllers/alltaskController.js",
+    "/Users/mariaadelinemaharaniwidyatmoko/Desktop/devops/Todo-List-nodejs/controllers/completedtaskController.js",
+    "/Users/mariaadelinemaharaniwidyatmoko/Desktop/devops/Todo-List-nodejs/routes/api.js",
+    "/Users/mariaadelinemaharaniwidyatmoko/Desktop/devops/Todo-List-nodejs/models/register.js"
+  ]
+}

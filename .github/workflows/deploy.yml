@@ -31,7 +31,7 @@ jobs:
       - name: Generate Unit Test Coverage Report
         run: npm run test:coverage
 
-       # --- STEP 2: INJECT VISUAL SUMMARY DIRECTLY INTO THE PULL REQUEST (Zero-config) ---
+        # --- STEP 2: INJECT VISUAL SUMMARY DIRECTLY INTO THE PULL REQUEST (Zero-config) ---
       - name: Comment Coverage on Pull Request
         if: github.event_name == 'pull_request'
         uses: ArtiomTr/jest-coverage-report-action@v2

@@ -5,10 +5,10 @@ module.exports = {
   forceExit: true,
   clearMocks: true,
   collectCoverage: true,
-  coverageDirectory: "coverage",
+  coverageDirectory: 'coverage',
   collectCoverageFrom: [
-    "controllers/**/*.js",
-    "routes/**/*.js",
-    "!node_modules/**"
-  ]
+    'controllers/**/*.js',
+    'routes/**/*.js',
+    '!node_modules/**',
+  ],
 };

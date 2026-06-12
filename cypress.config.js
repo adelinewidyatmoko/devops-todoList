@@ -5,8 +5,8 @@ module.exports = defineConfig({
 
   e2e: {
     setupNodeEvents(on, config) {
-      require("@cypress/code-coverage/task")(on, config);
-       return config;
+      require('@cypress/code-coverage/task')(on, config);
+      return config;
     },
     baseUrl: process.env.CYPRESS_BASE_URL || 'http://localhost:4000',
     // Add the viewport dimensions here

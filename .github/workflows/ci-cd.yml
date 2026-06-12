@@ -107,8 +107,10 @@ jobs:
 
   deploy-production:
     name: Deploy to Production
-    #    needs: ci-tests
-    needs: ci-quality # Changed from ci-tests to ci-quality to skip E2E
+    needs: deploy-staging
+    if:
+      needs.deploy-staging.result == 'success'
+      # Changed from ci-tests to ci-quality to skip E2E
     runs-on: ubuntu-latest
 
     environment:

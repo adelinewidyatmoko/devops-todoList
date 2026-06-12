@@ -1,4 +1,3 @@
-const db = require('../config/mongoose');
 const Dashboard = require('../models/dashboard');
 
 module.exports.alltask = function (req, res) {

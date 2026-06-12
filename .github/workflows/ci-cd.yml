@@ -78,8 +78,7 @@ jobs:
     #    needs: ci-tests
     needs: ci-quality # Changed from ci-tests to ci-quality to skip E2E
     runs-on: ubuntu-latest
-    # Only deploy on push to cd_role
-    if: github.event_name == 'push' && github.ref == 'refs/heads/cd_role'
+
     environment:
       name: staging
     steps:
@@ -102,8 +101,7 @@ jobs:
     #    needs: ci-tests
     needs: ci-quality # Changed from ci-tests to ci-quality to skip E2E
     runs-on: ubuntu-latest
-    # Only deploy on push to main
-    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+   
     environment:
       name: production
     steps:

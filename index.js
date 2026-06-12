@@ -24,6 +24,10 @@ app.use(
   })
 );
 
+if (typeof global.__coverage__ !== 'undefined') {
+  require('@cypress/code-coverage/middleware/express')(app);
+}
+
 // ─── THE CLEAN ROUTE MOUNTING ───
 app.use('/', require('./routes/index1')); // Handles page views (/, /dashboard, etc.)
 app.use('/api', require('./routes/api')); // Handles data actions (/api/register, /api/addtask)

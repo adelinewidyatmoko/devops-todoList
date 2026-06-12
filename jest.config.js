@@ -4,4 +4,11 @@ module.exports = {
   verbose: true,
   forceExit: true,
   clearMocks: true,
+  collectCoverage: true,
+  coverageDirectory: "coverage",
+  collectCoverageFrom: [
+    "controllers/**/*.js",
+    "routes/**/*.js",
+    "!node_modules/**"
+  ]
 };

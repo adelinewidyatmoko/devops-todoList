@@ -1,4 +1,300 @@
 {
+  "/Users/mariaadelinemaharaniwidyatmoko/Desktop/devops/Todo-List-nodejs/index.js": {
+    "path": "/Users/mariaadelinemaharaniwidyatmoko/Desktop/devops/Todo-List-nodejs/index.js",
+    "statementMap": {
+      "0": {
+        "start": { "line": 2, "column": 16 },
+        "end": { "line": 2, "column": 34 }
+      },
+      "1": {
+        "start": { "line": 3, "column": 16 },
+        "end": { "line": 3, "column": 42 }
+      },
+      "2": {
+        "start": { "line": 4, "column": 13 },
+        "end": { "line": 4, "column": 37 }
+      },
+      "3": {
+        "start": { "line": 5, "column": 13 },
+        "end": { "line": 5, "column": 28 }
+      },
+      "4": {
+        "start": { "line": 8, "column": 0 },
+        "end": { "line": 8, "column": 29 }
+      },
+      "5": {
+        "start": { "line": 10, "column": 12 },
+        "end": { "line": 10, "column": 21 }
+      },
+      "6": {
+        "start": { "line": 13, "column": 0 },
+        "end": { "line": 13, "column": 30 }
+      },
+      "7": {
+        "start": { "line": 14, "column": 0 },
+        "end": { "line": 14, "column": 48 }
+      },
+      "8": {
+        "start": { "line": 17, "column": 0 },
+        "end": { "line": 17, "column": 48 }
+      },
+      "9": {
+        "start": { "line": 18, "column": 0 },
+        "end": { "line": 18, "column": 34 }
+      },
+      "10": {
+        "start": { "line": 19, "column": 0 },
+        "end": { "line": 25, "column": 2 }
+      },
+      "11": {
+        "start": { "line": 27, "column": 0 },
+        "end": { "line": 29, "column": 1 }
+      },
+      "12": {
+        "start": { "line": 28, "column": 2 },
+        "end": { "line": 28, "column": 60 }
+      },
+      "13": {
+        "start": { "line": 32, "column": 0 },
+        "end": { "line": 32, "column": 41 }
+      },
+      "14": {
+        "start": { "line": 33, "column": 0 },
+        "end": { "line": 33, "column": 41 }
+      },
+      "15": {
+        "start": { "line": 35, "column": 0 },
+        "end": { "line": 38, "column": 3 }
+      },
+      "16": {
+        "start": { "line": 36, "column": 2 },
+        "end": { "line": 36, "column": 40 }
+      },
+      "17": {
+        "start": { "line": 36, "column": 11 },
+        "end": { "line": 36, "column": 40 }
+      },
+      "18": {
+        "start": { "line": 37, "column": 2 },
+        "end": { "line": 37, "column": 65 }
+      }
+    },
+    "fnMap": {
+      "0": {
+        "name": "(anonymous_0)",
+        "decl": {
+          "start": { "line": 35, "column": 17 },
+          "end": { "line": 35, "column": 18 }
+        },
+        "loc": {
+          "start": { "line": 35, "column": 26 },
+          "end": { "line": 38, "column": 1 }
+        },
+        "line": 35
+      }
+    },
+    "branchMap": {
+      "0": {
+        "loc": {
+          "start": { "line": 4, "column": 13 },
+          "end": { "line": 4, "column": 37 }
+        },
+        "type": "binary-expr",
+        "locations": [
+          {
+            "start": { "line": 4, "column": 13 },
+            "end": { "line": 4, "column": 29 }
+          },
+          {
+            "start": { "line": 4, "column": 33 },
+            "end": { "line": 4, "column": 37 }
+          }
+        ],
+        "line": 4
+      },
+      "1": {
+        "loc": {
+          "start": { "line": 21, "column": 12 },
+          "end": { "line": 21, "column": 68 }
+        },
+        "type": "binary-expr",
+        "locations": [
+          {
+            "start": { "line": 21, "column": 12 },
+            "end": { "line": 21, "column": 38 }
+          },
+          {
+            "start": { "line": 21, "column": 42 },
+            "end": { "line": 21, "column": 68 }
+          }
+        ],
+        "line": 21
+      },
+      "2": {
+        "loc": {
+          "start": { "line": 27, "column": 0 },
+          "end": { "line": 29, "column": 1 }
+        },
+        "type": "if",
+        "locations": [
+          {
+            "start": { "line": 27, "column": 0 },
+            "end": { "line": 29, "column": 1 }
+          },
+          { "start": {}, "end": {} }
+        ],
+        "line": 27
+      },
+      "3": {
+        "loc": {
+          "start": { "line": 36, "column": 2 },
+          "end": { "line": 36, "column": 40 }
+        },
+        "type": "if",
+        "locations": [
+          {
+            "start": { "line": 36, "column": 2 },
+            "end": { "line": 36, "column": 40 }
+          },
+          { "start": {}, "end": {} }
+        ],
+        "line": 36
+      }
+    },
+    "s": {
+      "0": 2,
+      "1": 2,
+      "2": 2,
+      "3": 2,
+      "4": 2,
+      "5": 2,
+      "6": 2,
+      "7": 2,
+      "8": 2,
+      "9": 2,
+      "10": 2,
+      "11": 2,
+      "12": 2,
+      "13": 2,
+      "14": 2,
+      "15": 2,
+      "16": 2,
+      "17": 0,
+      "18": 2
+    },
+    "f": { "0": 2 },
+    "b": { "0": [2, 2], "1": [2, 2], "2": [2, 0], "3": [0, 2] },
+    "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    "hash": "fb781e5053fe9204c2acca85b99e8b9f186b2cb7",
+    "contentHash": "58658b5d98386dafb609a0a961de7117f1dab3e61b463a9abff39b910e6a31b4"
+  },
+  "/Users/mariaadelinemaharaniwidyatmoko/Desktop/devops/Todo-List-nodejs/config/mongoose.js": {
+    "path": "/Users/mariaadelinemaharaniwidyatmoko/Desktop/devops/Todo-List-nodejs/config/mongoose.js",
+    "statementMap": {
+      "0": {
+        "start": { "line": 1, "column": 13 },
+        "end": { "line": 1, "column": 28 }
+      },
+      "1": {
+        "start": { "line": 3, "column": 0 },
+        "end": { "line": 3, "column": 71 }
+      },
+      "2": {
+        "start": { "line": 6, "column": 17 },
+        "end": { "line": 6, "column": 36 }
+      },
+      "3": {
+        "start": { "line": 8, "column": 14 },
+        "end": { "line": 10, "column": 1 }
+      },
+      "4": {
+        "start": { "line": 12, "column": 0 },
+        "end": { "line": 12, "column": 62 }
+      },
+      "5": {
+        "start": { "line": 14, "column": 0 },
+        "end": { "line": 23, "column": 68 }
+      },
+      "6": {
+        "start": { "line": 22, "column": 14 },
+        "end": { "line": 22, "column": 52 }
+      },
+      "7": {
+        "start": { "line": 23, "column": 18 },
+        "end": { "line": 23, "column": 66 }
+      },
+      "8": {
+        "start": { "line": 25, "column": 0 },
+        "end": { "line": 25, "column": 37 }
+      }
+    },
+    "fnMap": {
+      "0": {
+        "name": "(anonymous_0)",
+        "decl": {
+          "start": { "line": 22, "column": 8 },
+          "end": { "line": 22, "column": 9 }
+        },
+        "loc": {
+          "start": { "line": 22, "column": 14 },
+          "end": { "line": 22, "column": 52 }
+        },
+        "line": 22
+      },
+      "1": {
+        "name": "(anonymous_1)",
+        "decl": {
+          "start": { "line": 23, "column": 9 },
+          "end": { "line": 23, "column": 10 }
+        },
+        "loc": {
+          "start": { "line": 23, "column": 18 },
+          "end": { "line": 23, "column": 66 }
+        },
+        "line": 23
+      }
+    },
+    "branchMap": {
+      "0": {
+        "loc": {
+          "start": { "line": 9, "column": 2 },
+          "end": { "line": 9, "column": 77 }
+        },
+        "type": "binary-expr",
+        "locations": [
+          {
+            "start": { "line": 9, "column": 2 },
+            "end": { "line": 9, "column": 25 }
+          },
+          {
+            "start": { "line": 9, "column": 29 },
+            "end": { "line": 9, "column": 52 }
+          },
+          {
+            "start": { "line": 9, "column": 56 },
+            "end": { "line": 9, "column": 77 }
+          }
+        ],
+        "line": 9
+      }
+    },
+    "s": {
+      "0": 2,
+      "1": 2,
+      "2": 2,
+      "3": 2,
+      "4": 2,
+      "5": 2,
+      "6": 2,
+      "7": 0,
+      "8": 2
+    },
+    "f": { "0": 2, "1": 0 },
+    "b": { "0": [2, 2, 2] },
+    "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    "hash": "92c09d4df8503f238046752142f13ac68ba74368",
+    "contentHash": "d852fbd0bde21f778b258294b65228414379fcb66620c1a4dad204128a137966"
+  },
   "/Users/mariaadelinemaharaniwidyatmoko/Desktop/devops/Todo-List-nodejs/controllers/alltaskController.js": {
     "path": "/Users/mariaadelinemaharaniwidyatmoko/Desktop/devops/Todo-List-nodejs/controllers/alltaskController.js",
     "statementMap": {
@@ -111,11 +407,12 @@
         "line": 8
       }
     },
-    "s": { "0": 1, "1": 1, "2": 1, "3": 2, "4": 2, "5": 2, "6": 0, "7": 0 },
-    "f": { "0": 2, "1": 2, "2": 0 },
-    "b": { "0": [1, 1], "1": [2, 1] },
+    "s": { "0": 2, "1": 2, "2": 2, "3": 5, "4": 5, "5": 5, "6": 0, "7": 0 },
+    "f": { "0": 5, "1": 5, "2": 0 },
+    "b": { "0": [3, 2], "1": [5, 5] },
     "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
-    "hash": "6aae6555c25113b45d8c7c704b9f45a390356bdc"
+    "hash": "6aae6555c25113b45d8c7c704b9f45a390356bdc",
+    "contentHash": "704ac0a6638c9dd47744967dc9ef816bf9ea6b3005cd7e18819f3d6e7e4923b9"
   },
   "/Users/mariaadelinemaharaniwidyatmoko/Desktop/devops/Todo-List-nodejs/controllers/completedtaskController.js": {
     "path": "/Users/mariaadelinemaharaniwidyatmoko/Desktop/devops/Todo-List-nodejs/controllers/completedtaskController.js",
@@ -225,11 +522,12 @@
         "line": 7
       }
     },
-    "s": { "0": 1, "1": 1, "2": 2, "3": 2, "4": 2, "5": 0, "6": 0 },
-    "f": { "0": 2, "1": 2, "2": 0 },
-    "b": { "0": [1, 1], "1": [2, 1] },
+    "s": { "0": 2, "1": 2, "2": 1, "3": 1, "4": 1, "5": 0, "6": 0 },
+    "f": { "0": 1, "1": 1, "2": 0 },
+    "b": { "0": [1, 0], "1": [1, 1] },
     "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
-    "hash": "5a55b8f05dcf24c4861bdabe0996c6d7793acb73"
+    "hash": "5a55b8f05dcf24c4861bdabe0996c6d7793acb73",
+    "contentHash": "630765e77f831602118dbfadbac9d86d5b730c4b59b86d4afa3dd7c62cab2777"
   },
   "/Users/mariaadelinemaharaniwidyatmoko/Desktop/devops/Todo-List-nodejs/controllers/dashboardController.js": {
     "path": "/Users/mariaadelinemaharaniwidyatmoko/Desktop/devops/Todo-List-nodejs/controllers/dashboardController.js",
@@ -339,11 +637,12 @@
         "line": 7
       }
     },
-    "s": { "0": 1, "1": 1, "2": 2, "3": 2, "4": 2, "5": 0, "6": 0 },
-    "f": { "0": 2, "1": 2, "2": 0 },
-    "b": { "0": [1, 1], "1": [2, 1] },
+    "s": { "0": 2, "1": 2, "2": 3, "3": 3, "4": 3, "5": 0, "6": 0 },
+    "f": { "0": 3, "1": 3, "2": 0 },
+    "b": { "0": [3, 0], "1": [3, 3] },
     "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
-    "hash": "d9d589358f39d1ac46fc2db30a1c6b7d50f8c941"
+    "hash": "d9d589358f39d1ac46fc2db30a1c6b7d50f8c941",
+    "contentHash": "8e1c11e128c7af2c94f17acc99c61784debd1809dad2db57d5385c4f79c40df5"
   },
   "/Users/mariaadelinemaharaniwidyatmoko/Desktop/devops/Todo-List-nodejs/controllers/homeController.js": {
     "path": "/Users/mariaadelinemaharaniwidyatmoko/Desktop/devops/Todo-List-nodejs/controllers/homeController.js",
@@ -372,11 +671,12 @@
       }
     },
     "branchMap": {},
-    "s": { "0": 1, "1": 1 },
+    "s": { "0": 2, "1": 1 },
     "f": { "0": 1 },
     "b": {},
     "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
-    "hash": "7dac21ffb569752c241b5099f83e521bf25146cf"
+    "hash": "7dac21ffb569752c241b5099f83e521bf25146cf",
+    "contentHash": "46573fdfa908cb49900a8d4cdab628894486d29fdb7bd98fc4c158066bd75120"
   },
   "/Users/mariaadelinemaharaniwidyatmoko/Desktop/devops/Todo-List-nodejs/controllers/registerController.js": {
     "path": "/Users/mariaadelinemaharaniwidyatmoko/Desktop/devops/Todo-List-nodejs/controllers/registerController.js",
@@ -425,11 +725,118 @@
       }
     },
     "branchMap": {},
-    "s": { "0": 1, "1": 1, "2": 1, "3": 1 },
-    "f": { "0": 1, "1": 1 },
+    "s": { "0": 2, "1": 0, "2": 2, "3": 1 },
+    "f": { "0": 0, "1": 1 },
     "b": {},
     "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
-    "hash": "fe0299b08a7294d22ab54c6eadcfeaa7f7e82175"
+    "hash": "fe0299b08a7294d22ab54c6eadcfeaa7f7e82175",
+    "contentHash": "927f5644e331ab8a88cd40dbafc0d760a40623052bcb7a4a6291b160eec1da17"
+  },
+  "/Users/mariaadelinemaharaniwidyatmoko/Desktop/devops/Todo-List-nodejs/models/dashboard.js": {
+    "path": "/Users/mariaadelinemaharaniwidyatmoko/Desktop/devops/Todo-List-nodejs/models/dashboard.js",
+    "statementMap": {
+      "0": {
+        "start": { "line": 1, "column": 17 },
+        "end": { "line": 1, "column": 36 }
+      },
+      "1": {
+        "start": { "line": 2, "column": 13 },
+        "end": { "line": 2, "column": 23 }
+      },
+      "2": {
+        "start": { "line": 4, "column": 2 },
+        "end": { "line": 4, "column": 69 }
+      },
+      "3": {
+        "start": { "line": 6, "column": 2 },
+        "end": { "line": 6, "column": 77 }
+      },
+      "4": {
+        "start": { "line": 7, "column": 0 },
+        "end": { "line": 7, "column": 25 }
+      },
+      "5": {
+        "start": { "line": 10, "column": 20 },
+        "end": { "line": 23, "column": 3 }
+      },
+      "6": {
+        "start": { "line": 24, "column": 2 },
+        "end": { "line": 24, "column": 32 }
+      },
+      "7": {
+        "start": { "line": 27, "column": 24 },
+        "end": { "line": 60, "column": 2 }
+      },
+      "8": {
+        "start": { "line": 62, "column": 18 },
+        "end": { "line": 62, "column": 62 }
+      },
+      "9": {
+        "start": { "line": 63, "column": 0 },
+        "end": { "line": 63, "column": 27 }
+      }
+    },
+    "fnMap": {
+      "0": {
+        "name": "getMonth",
+        "decl": {
+          "start": { "line": 9, "column": 9 },
+          "end": { "line": 9, "column": 17 }
+        },
+        "loc": {
+          "start": { "line": 9, "column": 31 },
+          "end": { "line": 25, "column": 1 }
+        },
+        "line": 9
+      }
+    },
+    "branchMap": {},
+    "s": {
+      "0": 2,
+      "1": 2,
+      "2": 2,
+      "3": 2,
+      "4": 2,
+      "5": 2,
+      "6": 2,
+      "7": 2,
+      "8": 2,
+      "9": 2
+    },
+    "f": { "0": 2 },
+    "b": {},
+    "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    "hash": "b5d99e0efe3f9556c4c440f360f421042036f5bf",
+    "contentHash": "61aad31cabdd1b3e1a6ad6cd5897a852a61daedf1ad09c6742e632a7a0319c61"
+  },
+  "/Users/mariaadelinemaharaniwidyatmoko/Desktop/devops/Todo-List-nodejs/models/register.js": {
+    "path": "/Users/mariaadelinemaharaniwidyatmoko/Desktop/devops/Todo-List-nodejs/models/register.js",
+    "statementMap": {
+      "0": {
+        "start": { "line": 1, "column": 17 },
+        "end": { "line": 1, "column": 36 }
+      },
+      "1": {
+        "start": { "line": 2, "column": 23 },
+        "end": { "line": 23, "column": 2 }
+      },
+      "2": {
+        "start": { "line": 25, "column": 17 },
+        "end": { "line": 25, "column": 59 }
+      },
+      "3": {
+        "start": { "line": 26, "column": 0 },
+        "end": { "line": 26, "column": 26 }
+      }
+    },
+    "fnMap": {},
+    "branchMap": {},
+    "s": { "0": 2, "1": 2, "2": 2, "3": 2 },
+    "f": {},
+    "b": {},
+    "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    "hash": "5171f7aeeb8a1bf4dc80a3ce6a26f30974887610",
+    "contentHash": "82a1acce8c5a34c0001825636161d6c743fafd5e52e67e096e7a6cbf8d5d5940"
   },
   "/Users/mariaadelinemaharaniwidyatmoko/Desktop/devops/Todo-List-nodejs/routes/api.js": {
     "path": "/Users/mariaadelinemaharaniwidyatmoko/Desktop/devops/Todo-List-nodejs/routes/api.js",
@@ -1111,23 +1518,23 @@
       "6": 0,
       "7": 0,
       "8": 0,
-      "9": 4,
-      "10": 4,
-      "11": 4,
-      "12": 4,
-      "13": 4,
-      "14": 4,
+      "9": 0,
+      "10": 0,
+      "11": 0,
+      "12": 0,
+      "13": 0,
+      "14": 0,
       "15": 0,
-      "16": 2,
+      "16": 0,
       "17": 0,
-      "18": 2,
+      "18": 0,
       "19": 2,
-      "20": 1,
-      "21": 1,
-      "22": 1,
-      "23": 1,
-      "24": 1,
-      "25": 1,
+      "20": 0,
+      "21": 0,
+      "22": 0,
+      "23": 0,
+      "24": 0,
+      "25": 0,
       "26": 0,
       "27": 0,
       "28": 2,
@@ -1135,22 +1542,22 @@
       "30": 0,
       "31": 0,
       "32": 2,
-      "33": 3,
-      "34": 3,
-      "35": 3,
-      "36": 3,
+      "33": 1,
+      "34": 1,
+      "35": 1,
+      "36": 1,
       "37": 0,
-      "38": 3,
-      "39": 3,
-      "40": 1,
-      "41": 2,
-      "42": 2,
+      "38": 1,
+      "39": 1,
+      "40": 0,
+      "41": 1,
+      "42": 1,
       "43": 0,
       "44": 0,
       "45": 2,
-      "46": 1,
-      "47": 1,
-      "48": 1,
+      "46": 2,
+      "47": 2,
+      "48": 2,
       "49": 0,
       "50": 0,
       "51": 2,
@@ -1161,12 +1568,12 @@
       "56": 0,
       "57": 0,
       "58": 2,
-      "59": 2,
-      "60": 2,
-      "61": 2,
+      "59": 0,
+      "60": 0,
+      "61": 0,
       "62": 0,
-      "63": 2,
-      "64": 2,
+      "63": 0,
+      "64": 0,
       "65": 0,
       "66": 0,
       "67": 2,
@@ -1181,36 +1588,37 @@
     "f": {
       "0": 0,
       "1": 0,
-      "2": 4,
+      "2": 0,
       "3": 0,
-      "4": 2,
-      "5": 1,
+      "4": 0,
+      "5": 0,
       "6": 0,
-      "7": 3,
-      "8": 1,
-      "9": 1,
+      "7": 1,
+      "8": 2,
+      "9": 2,
       "10": 0,
       "11": 1,
       "12": 1,
       "13": 0,
-      "14": 2,
+      "14": 0,
       "15": 2,
       "16": 2,
       "17": 0
     },
     "b": {
       "0": [0, 0],
-      "1": [2],
-      "2": [4, 0],
-      "3": [4, 2],
-      "4": [0, 2],
-      "5": [0, 3],
-      "6": [1, 2],
-      "7": [0, 2],
-      "8": [2, 0]
+      "1": [0],
+      "2": [0, 0],
+      "3": [0, 0],
+      "4": [0, 0],
+      "5": [0, 1],
+      "6": [0, 1],
+      "7": [0, 0],
+      "8": [0, 0]
     },
     "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
-    "hash": "2da5d8abfd57e572048e16a12b0759778758475a"
+    "hash": "2da5d8abfd57e572048e16a12b0759778758475a",
+    "contentHash": "75d96f0261188298899f5d9abb20dcb312ee428e3fe8fc9a60268d77c5a6cb17"
   },
   "/Users/mariaadelinemaharaniwidyatmoko/Desktop/devops/Todo-List-nodejs/routes/index1.js": {
     "path": "/Users/mariaadelinemaharaniwidyatmoko/Desktop/devops/Todo-List-nodejs/routes/index1.js",
@@ -1279,23 +1687,26 @@
     "fnMap": {},
     "branchMap": {},
     "s": {
-      "0": 0,
-      "1": 0,
-      "2": 0,
-      "3": 0,
-      "4": 0,
-      "5": 0,
-      "6": 0,
-      "7": 0,
-      "8": 0,
-      "9": 0,
-      "10": 0,
-      "11": 0,
-      "12": 0,
-      "13": 0,
-      "14": 0
+      "0": 2,
+      "1": 2,
+      "2": 2,
+      "3": 2,
+      "4": 2,
+      "5": 2,
+      "6": 2,
+      "7": 2,
+      "8": 2,
+      "9": 2,
+      "10": 2,
+      "11": 2,
+      "12": 2,
+      "13": 2,
+      "14": 2
     },
     "f": {},
-    "b": {}
+    "b": {},
+    "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    "hash": "28a9ffc278e5158a3582f3936276419262f4b809",
+    "contentHash": "34ff2cbd5fd34cadbf166a2d239d8af20a84840bea99ca419904620bdd42dbf0"
   }
 }

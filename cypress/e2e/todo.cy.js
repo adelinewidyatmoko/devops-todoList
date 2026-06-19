@@ -31,7 +31,7 @@ describe('Todo App End-to-End Tests', () => {
     cy.get('#shopping').first().click({ force: true });
 
     // 8. Select the date input and choose a date (e.g., 2024-12-31)
-    cy.get('.input-date').type('2026-06-14');
+    cy.get('.input-date').type('2026-07-14');
 
     // 9. Select time input
     cy.get('.input-time').type('10:30');
@@ -94,7 +94,7 @@ describe('Todo App End-to-End Tests', () => {
     cy.get('#shopping').first().click({ force: true });
 
     // 4. Select the date input and choose a date (e.g., 2024-12-31)
-    cy.get('.input-date').first().type('2026-06-14');
+    cy.get('.input-date').first().type('2026-07-14');
 
     // 5. Select time input
     cy.get('.input-time').first().type('10:30');

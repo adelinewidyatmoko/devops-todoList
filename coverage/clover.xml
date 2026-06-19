@@ -1,57 +1,119 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1781240676458" clover="3.2.0">
-  <project timestamp="1781240676458" name="All files">
-    <metrics statements="118" coveredstatements="74" conditionals="29" coveredconditionals="22" methods="30" coveredmethods="20" elements="177" coveredelements="116" complexity="0" loc="118" ncloc="118" packages="2" files="7" classes="7"/>
-    <package name="controllers">
-      <metrics statements="28" coveredstatements="22" conditionals="12" coveredconditionals="12" methods="12" coveredmethods="9"/>
+<coverage generated="1781836572111" clover="3.2.0">
+  <project timestamp="1781836572111" name="All files">
+    <metrics statements="159" coveredstatements="108" conditionals="40" coveredconditionals="21" methods="34" coveredmethods="18" elements="233" coveredelements="147" complexity="0" loc="159" ncloc="159" packages="5" files="11" classes="11"/>
+    <package name="Todo-List-nodejs">
+      <metrics statements="18" coveredstatements="18" conditionals="8" coveredconditionals="6" methods="1" coveredmethods="1"/>
+      <file name="index.js" path="/Users/mariaadelinemaharaniwidyatmoko/Desktop/devops/Todo-List-nodejs/index.js">
+        <metrics statements="18" coveredstatements="18" conditionals="8" coveredconditionals="6" methods="1" coveredmethods="1"/>
+        <line num="2" count="2" type="stmt"/>
+        <line num="3" count="2" type="stmt"/>
+        <line num="4" count="2" type="cond" truecount="2" falsecount="0"/>
+        <line num="5" count="2" type="stmt"/>
+        <line num="8" count="2" type="stmt"/>
+        <line num="10" count="2" type="stmt"/>
+        <line num="13" count="2" type="stmt"/>
+        <line num="14" count="2" type="stmt"/>
+        <line num="17" count="2" type="stmt"/>
+        <line num="18" count="2" type="stmt"/>
+        <line num="19" count="2" type="stmt"/>
+        <line num="27" count="2" type="cond" truecount="1" falsecount="1"/>
+        <line num="28" count="2" type="stmt"/>
+        <line num="32" count="2" type="stmt"/>
+        <line num="33" count="2" type="stmt"/>
+        <line num="35" count="2" type="stmt"/>
+        <line num="36" count="2" type="cond" truecount="1" falsecount="1"/>
+        <line num="37" count="2" type="stmt"/>
+      </file>
+    </package>
+    <package name="Todo-List-nodejs.config">
+      <metrics statements="9" coveredstatements="8" conditionals="3" coveredconditionals="3" methods="2" coveredmethods="1"/>
+      <file name="mongoose.js" path="/Users/mariaadelinemaharaniwidyatmoko/Desktop/devops/Todo-List-nodejs/config/mongoose.js">
+        <metrics statements="9" coveredstatements="8" conditionals="3" coveredconditionals="3" methods="2" coveredmethods="1"/>
+        <line num="1" count="2" type="stmt"/>
+        <line num="3" count="2" type="stmt"/>
+        <line num="6" count="2" type="stmt"/>
+        <line num="8" count="2" type="stmt"/>
+        <line num="12" count="2" type="stmt"/>
+        <line num="14" count="2" type="stmt"/>
+        <line num="22" count="2" type="stmt"/>
+        <line num="23" count="0" type="stmt"/>
+        <line num="25" count="2" type="stmt"/>
+      </file>
+    </package>
+    <package name="Todo-List-nodejs.controllers">
+      <metrics statements="28" coveredstatements="21" conditionals="12" coveredconditionals="10" methods="12" coveredmethods="8"/>
       <file name="alltaskController.js" path="/Users/mariaadelinemaharaniwidyatmoko/Desktop/devops/Todo-List-nodejs/controllers/alltaskController.js">
         <metrics statements="8" coveredstatements="6" conditionals="4" coveredconditionals="4" methods="3" coveredmethods="2"/>
-        <line num="1" count="1" type="stmt"/>
-        <line num="2" count="1" type="stmt"/>
-        <line num="4" count="1" type="stmt"/>
-        <line num="5" count="2" type="stmt"/>
-        <line num="8" count="2" type="cond" truecount="4" falsecount="0"/>
-        <line num="10" count="2" type="stmt"/>
+        <line num="1" count="2" type="stmt"/>
+        <line num="2" count="2" type="stmt"/>
+        <line num="4" count="2" type="stmt"/>
+        <line num="5" count="5" type="stmt"/>
+        <line num="8" count="5" type="cond" truecount="4" falsecount="0"/>
+        <line num="10" count="5" type="stmt"/>
         <line num="17" count="0" type="stmt"/>
         <line num="18" count="0" type="stmt"/>
       </file>
       <file name="completedtaskController.js" path="/Users/mariaadelinemaharaniwidyatmoko/Desktop/devops/Todo-List-nodejs/controllers/completedtaskController.js">
-        <metrics statements="7" coveredstatements="5" conditionals="4" coveredconditionals="4" methods="3" coveredmethods="2"/>
-        <line num="1" count="1" type="stmt"/>
-        <line num="3" count="1" type="stmt"/>
-        <line num="4" count="2" type="stmt"/>
-        <line num="7" count="2" type="cond" truecount="4" falsecount="0"/>
-        <line num="9" count="2" type="stmt"/>
+        <metrics statements="7" coveredstatements="5" conditionals="4" coveredconditionals="3" methods="3" coveredmethods="2"/>
+        <line num="1" count="2" type="stmt"/>
+        <line num="3" count="2" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="7" count="1" type="cond" truecount="3" falsecount="1"/>
+        <line num="9" count="1" type="stmt"/>
         <line num="16" count="0" type="stmt"/>
         <line num="17" count="0" type="stmt"/>
       </file>
       <file name="dashboardController.js" path="/Users/mariaadelinemaharaniwidyatmoko/Desktop/devops/Todo-List-nodejs/controllers/dashboardController.js">
-        <metrics statements="7" coveredstatements="5" conditionals="4" coveredconditionals="4" methods="3" coveredmethods="2"/>
-        <line num="1" count="1" type="stmt"/>
-        <line num="3" count="1" type="stmt"/>
-        <line num="4" count="2" type="stmt"/>
-        <line num="7" count="2" type="cond" truecount="4" falsecount="0"/>
-        <line num="9" count="2" type="stmt"/>
+        <metrics statements="7" coveredstatements="5" conditionals="4" coveredconditionals="3" methods="3" coveredmethods="2"/>
+        <line num="1" count="2" type="stmt"/>
+        <line num="3" count="2" type="stmt"/>
+        <line num="4" count="3" type="stmt"/>
+        <line num="7" count="3" type="cond" truecount="3" falsecount="1"/>
+        <line num="9" count="3" type="stmt"/>
         <line num="16" count="0" type="stmt"/>
         <line num="18" count="0" type="stmt"/>
       </file>
       <file name="homeController.js" path="/Users/mariaadelinemaharaniwidyatmoko/Desktop/devops/Todo-List-nodejs/controllers/homeController.js">
         <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-        <line num="1" count="1" type="stmt"/>
+        <line num="1" count="2" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
       </file>
       <file name="registerController.js" path="/Users/mariaadelinemaharaniwidyatmoko/Desktop/devops/Todo-List-nodejs/controllers/registerController.js">
-        <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
-        <line num="1" count="1" type="stmt"/>
-        <line num="2" count="1" type="stmt"/>
-        <line num="7" count="1" type="stmt"/>
+        <metrics statements="4" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="1"/>
+        <line num="1" count="2" type="stmt"/>
+        <line num="2" count="0" type="stmt"/>
+        <line num="7" count="2" type="stmt"/>
         <line num="8" count="1" type="stmt"/>
       </file>
     </package>
-    <package name="routes">
-      <metrics statements="90" coveredstatements="52" conditionals="17" coveredconditionals="10" methods="18" coveredmethods="11"/>
+    <package name="Todo-List-nodejs.models">
+      <metrics statements="14" coveredstatements="14" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <file name="dashboard.js" path="/Users/mariaadelinemaharaniwidyatmoko/Desktop/devops/Todo-List-nodejs/models/dashboard.js">
+        <metrics statements="10" coveredstatements="10" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="1" count="2" type="stmt"/>
+        <line num="2" count="2" type="stmt"/>
+        <line num="4" count="2" type="stmt"/>
+        <line num="6" count="2" type="stmt"/>
+        <line num="7" count="2" type="stmt"/>
+        <line num="10" count="2" type="stmt"/>
+        <line num="24" count="2" type="stmt"/>
+        <line num="27" count="2" type="stmt"/>
+        <line num="62" count="2" type="stmt"/>
+        <line num="63" count="2" type="stmt"/>
+      </file>
+      <file name="register.js" path="/Users/mariaadelinemaharaniwidyatmoko/Desktop/devops/Todo-List-nodejs/models/register.js">
+        <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="2" type="stmt"/>
+        <line num="2" count="2" type="stmt"/>
+        <line num="25" count="2" type="stmt"/>
+        <line num="26" count="2" type="stmt"/>
+      </file>
+    </package>
+    <package name="Todo-List-nodejs.routes">
+      <metrics statements="90" coveredstatements="47" conditionals="17" coveredconditionals="2" methods="18" coveredmethods="7"/>
       <file name="api.js" path="/Users/mariaadelinemaharaniwidyatmoko/Desktop/devops/Todo-List-nodejs/routes/api.js">
-        <metrics statements="75" coveredstatements="52" conditionals="17" coveredconditionals="10" methods="18" coveredmethods="11"/>
+        <metrics statements="75" coveredstatements="32" conditionals="17" coveredconditionals="2" methods="18" coveredmethods="7"/>
         <line num="2" count="2" type="stmt"/>
         <line num="3" count="2" type="stmt"/>
         <line num="6" count="2" type="stmt"/>
@@ -61,23 +123,23 @@
         <line num="17" count="0" type="stmt"/>
         <line num="18" count="0" type="stmt"/>
         <line num="19" count="0" type="stmt"/>
-        <line num="23" count="4" type="stmt"/>
-        <line num="24" count="4" type="cond" truecount="1" falsecount="1"/>
-        <line num="27" count="4" type="stmt"/>
-        <line num="31" count="4" type="stmt"/>
-        <line num="37" count="4" type="stmt"/>
-        <line num="43" count="4" type="stmt"/>
+        <line num="23" count="0" type="stmt"/>
+        <line num="24" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="27" count="0" type="stmt"/>
+        <line num="31" count="0" type="stmt"/>
+        <line num="37" count="0" type="stmt"/>
+        <line num="43" count="0" type="stmt"/>
         <line num="47" count="0" type="stmt"/>
-        <line num="51" count="2" type="cond" truecount="1" falsecount="1"/>
+        <line num="51" count="0" type="cond" truecount="0" falsecount="2"/>
         <line num="52" count="0" type="stmt"/>
-        <line num="55" count="2" type="stmt"/>
+        <line num="55" count="0" type="stmt"/>
         <line num="58" count="2" type="stmt"/>
-        <line num="59" count="1" type="stmt"/>
-        <line num="60" count="1" type="stmt"/>
-        <line num="61" count="1" type="stmt"/>
-        <line num="63" count="1" type="stmt"/>
-        <line num="71" count="1" type="stmt"/>
-        <line num="73" count="1" type="stmt"/>
+        <line num="59" count="0" type="stmt"/>
+        <line num="60" count="0" type="stmt"/>
+        <line num="61" count="0" type="stmt"/>
+        <line num="63" count="0" type="stmt"/>
+        <line num="71" count="0" type="stmt"/>
+        <line num="73" count="0" type="stmt"/>
         <line num="75" count="0" type="stmt"/>
         <line num="77" count="0" type="stmt"/>
         <line num="81" count="2" type="stmt"/>
@@ -85,22 +147,22 @@
         <line num="84" count="0" type="stmt"/>
         <line num="86" count="0" type="stmt"/>
         <line num="89" count="2" type="stmt"/>
-        <line num="90" count="3" type="stmt"/>
-        <line num="91" count="3" type="stmt"/>
-        <line num="94" count="3" type="stmt"/>
-        <line num="98" count="3" type="cond" truecount="1" falsecount="1"/>
+        <line num="90" count="1" type="stmt"/>
+        <line num="91" count="1" type="stmt"/>
+        <line num="94" count="1" type="stmt"/>
+        <line num="98" count="1" type="cond" truecount="1" falsecount="1"/>
         <line num="99" count="0" type="stmt"/>
-        <line num="103" count="3" type="stmt"/>
-        <line num="105" count="3" type="cond" truecount="2" falsecount="0"/>
-        <line num="106" count="1" type="stmt"/>
-        <line num="109" count="2" type="stmt"/>
-        <line num="115" count="2" type="stmt"/>
+        <line num="103" count="1" type="stmt"/>
+        <line num="105" count="1" type="cond" truecount="1" falsecount="1"/>
+        <line num="106" count="0" type="stmt"/>
+        <line num="109" count="1" type="stmt"/>
+        <line num="115" count="1" type="stmt"/>
         <line num="117" count="0" type="stmt"/>
         <line num="119" count="0" type="stmt"/>
         <line num="124" count="2" type="stmt"/>
-        <line num="125" count="1" type="stmt"/>
-        <line num="133" count="1" type="stmt"/>
-        <line num="134" count="1" type="stmt"/>
+        <line num="125" count="2" type="stmt"/>
+        <line num="133" count="2" type="stmt"/>
+        <line num="134" count="2" type="stmt"/>
         <line num="137" count="0" type="stmt"/>
         <line num="138" count="0" type="stmt"/>
         <line num="143" count="2" type="stmt"/>
@@ -111,12 +173,12 @@
         <line num="151" count="0" type="stmt"/>
         <line num="152" count="0" type="stmt"/>
         <line num="157" count="2" type="stmt"/>
-        <line num="158" count="2" type="stmt"/>
-        <line num="159" count="2" type="stmt"/>
-        <line num="161" count="2" type="cond" truecount="1" falsecount="1"/>
+        <line num="158" count="0" type="stmt"/>
+        <line num="159" count="0" type="stmt"/>
+        <line num="161" count="0" type="cond" truecount="0" falsecount="2"/>
         <line num="162" count="0" type="stmt"/>
-        <line num="165" count="2" type="stmt"/>
-        <line num="173" count="2" type="stmt"/>
+        <line num="165" count="0" type="stmt"/>
+        <line num="173" count="0" type="stmt"/>
         <line num="177" count="0" type="stmt"/>
         <line num="178" count="0" type="stmt"/>
         <line num="183" count="2" type="stmt"/>
@@ -129,22 +191,22 @@
         <line num="196" count="2" type="stmt"/>
       </file>
       <file name="index1.js" path="/Users/mariaadelinemaharaniwidyatmoko/Desktop/devops/Todo-List-nodejs/routes/index1.js">
-        <metrics statements="15" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-        <line num="1" count="0" type="stmt"/>
-        <line num="2" count="0" type="stmt"/>
-        <line num="3" count="0" type="stmt"/>
-        <line num="4" count="0" type="stmt"/>
-        <line num="5" count="0" type="stmt"/>
-        <line num="6" count="0" type="stmt"/>
-        <line num="7" count="0" type="stmt"/>
-        <line num="10" count="0" type="stmt"/>
-        <line num="12" count="0" type="stmt"/>
-        <line num="13" count="0" type="stmt"/>
-        <line num="14" count="0" type="stmt"/>
-        <line num="15" count="0" type="stmt"/>
-        <line num="16" count="0" type="stmt"/>
-        <line num="17" count="0" type="stmt"/>
-        <line num="19" count="0" type="stmt"/>
+        <metrics statements="15" coveredstatements="15" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="2" type="stmt"/>
+        <line num="2" count="2" type="stmt"/>
+        <line num="3" count="2" type="stmt"/>
+        <line num="4" count="2" type="stmt"/>
+        <line num="5" count="2" type="stmt"/>
+        <line num="6" count="2" type="stmt"/>
+        <line num="7" count="2" type="stmt"/>
+        <line num="10" count="2" type="stmt"/>
+        <line num="12" count="2" type="stmt"/>
+        <line num="13" count="2" type="stmt"/>
+        <line num="14" count="2" type="stmt"/>
+        <line num="15" count="2" type="stmt"/>
+        <line num="16" count="2" type="stmt"/>
+        <line num="17" count="2" type="stmt"/>
+        <line num="19" count="2" type="stmt"/>
       </file>
     </package>
   </project>
